@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <link rel="icon" type="image/png" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Lnzh">
+  <meta name="keywords" content="">
+  <title>Java多线程 - ZH&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ZH | Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-01 21:00">
+      2020年7月1日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><h4 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1 相关概念"></a>1 相关概念</h4><ul>
+<li>程序(program)：完成特定任务、用某种编程语言编写的一组指令的集合。<ul>
+<li>静态的代码、即没有加载到内存空间。</li>
+</ul>
+</li>
+<li>进程(process)：程序的一次执行过程，或是正在运行的一个程序。<ul>
+<li>进程作为资源分配的单位，系统在运行时会为每个进程分配不同的内存区域。</li>
+<li>动态的过程。</li>
+</ul>
+</li>
+<li>线程(thread)：一个程序内部的一条执行路径。<ul>
+<li>线程可分两种：一种是守护线程，一种是用户线程。</li>
+<li>线程作为调度和执行的单位，每个线程拥独立的运行栈和程序计数器，线程切换的开销小。</li>
+<li>多线程：同一个进程同一时间并行执行多个线程，多个线程共享同一个进程中的方法区、堆。</li>
+</ul>
+</li>
+<li>并行：多个CPU同时执行多个任务。</li>
+<li>并发：一个CPU(采用时间片)同时执行多个任务。</li>
+</ul>
+<h4 id="2-多线程程序的优点"><a href="#2-多线程程序的优点" class="headerlink" title="2 多线程程序的优点"></a>2 多线程程序的优点</h4><ol>
+<li>提高应用程序的响应。对图形化界面更有意义，可增强用户体验。</li>
+<li>提高计算机系统 CPU 的利用率。</li>
+<li>改善程序结构。将既长又复杂的进程分为多个线程，独立运行，利于理解和修改。</li>
+</ol>
+<h4 id="3-创建多线程的四种方式"><a href="#3-创建多线程的四种方式" class="headerlink" title="3 创建多线程的四种方式"></a>3 创建多线程的四种方式</h4><ul>
+<li><p>方式一：继承Thread类</p>
+<ul>
+<li><ol>
+<li><p>创建继承Thread类的子类</p>
+</li>
+<li><p>重写Thread类的run()方法</p>
+</li>
+<li><p>创建Thread类的子类的对象</p>
+</li>
+<li><p>通过对象调用start()</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>方式二：实现Runnable接口</p>
+<ul>
+<li><ol>
+<li>创建实现Runnable接口的实现类</li>
+<li>实现run()方法</li>
+<li>创建实现类对象</li>
+<li>将此对象作为参数传递到Thread类的构造器中，创建Thread类的对象</li>
+<li>通过Thread类的对象调用start()</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>相同点</p>
+<ul>
+<li>两种方式都需要重写run()，将线程要执行的逻辑声明在run()中。</li>
+<li>要启动线程，都是调用的Thread类中的start()。</li>
+</ul>
+</li>
+<li><p>优先选择实现Runnable接口的方式</p>
+<ul>
+<li>避免了单继承的局限性</li>
+<li>多个线程可以共享同一个接口实现类 的对象，非常适合多个相同线程来处理同一份资源。</li>
+</ul>
+</li>
+<li><p>常用方法</p>
+<ul>
+<li>start()：启动当前线程，调用当前线程的run()</li>
+<li>run()：通常需要重写，将线程要执行的操作声明在此方法中</li>
+<li>currentThread()：静态方法，返回执行当前代码的线程</li>
+<li>getName()：获取当前线程的名字</li>
+<li>setName()：设置当前线程的名字</li>
+<li>yield()：静态方法，释放当前cpu的执行权</li>
+<li>join()：在线程a中调用线程b的join()，线程a就进入阻塞状态，等待线程b执行完以后，线程a结束阻塞状态继续执行</li>
+<li>stop()：已过时。强制结束当前线程。</li>
+<li>sleep()：静态方法，在指定的时间内，当前线程是阻塞状态</li>
+<li>isAlive()：判断当前线程是否存活</li>
+</ul>
+</li>
+<li><p>优先级</p>
+<ul>
+<li>高优先级的线程有更高的概率抢占cpu的执行权。并不意味着只当高优先级的线程执行完以后，低优先级的线程才执行。</li>
+<li>MAX_PRIORITY = 10</li>
+<li>MIN_PRIORITY = 1</li>
+<li>NURM_PRIORITY = 5</li>
+<li>getPriority()：获取线程的优先级</li>
+<li>setPriority(int p)：设置线程的优先级</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>方式三(JDK5)：实现Callable接口<ul>
+<li><ol>
+<li>创建实现Callable的实现类</li>
+<li>实现call()方法</li>
+<li>创建实现类对象</li>
+<li>将此对象作为参数传递到FutureTask构造器中，创建FutureTask的对象</li>
+<li>将FutureTask对象作为参数传递到Thread类的构造器中，创建Thread对象</li>
+<li>通过Thread类的对象调用start()</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注：可通过FutureTask对象的get()方法获取call()方法的返回值</p>
+<p>实现Callable接口的方式创建多线程比实现Runnable接口创建多线程方式强大</p>
+<ul>
+<li>call()可以有返回值。</li>
+<li>call()可以抛出异常，被外面的操作捕获，获取异常的信息</li>
+<li>Callable是支持泛型的</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>方式四(JDK5)：线程池</p>
+<ul>
+<li><ol>
+<li><p>通过Executors工具类创建指定线程数量的线程池并声明为ExecutorService接口(多态)</p>
+</li>
+<li><p>二选一</p>
+<p>①创建Runnable接口的实现类对象作为参数传递到线程池的execute()方法中</p>
+<p>②创建Callable接口的实现类对象作为参数传递到线程池的submit()方法中</p>
+</li>
+<li><p>关闭线程池</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>使用线程池的好处</p>
+<ul>
+<li>提高响应速度（减少了创建新线程的时间）</li>
+<li>降低资源消耗（重复利用线程池中线程，不需要每次都创建）</li>
+<li>便于线程管理<ul>
+<li>corePoolSize：核心池的大小</li>
+<li>maximumPoolSize：最大线程数</li>
+<li>keepAliveTime：线程没任务时最多保持多长时间后会终止</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="4-线程的生命周期"><a href="#4-线程的生命周期" class="headerlink" title="4 线程的生命周期"></a>4 线程的生命周期</h4><p><img src="/images/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png" srcset="/img/loading.gif" alt=""></p>
+<h4 id="5-线程的同步"><a href="#5-线程的同步" class="headerlink" title="5 线程的同步"></a>5 线程的同步</h4><ul>
+<li><p>Java对于多线程的安全问题提供了专业的解决方式：同步机制。</p>
+</li>
+<li><p>同步代码块</p>
+<ul>
+<li><pre><code class="java"><span class="keyword">synchronized</span>(对象){
+    <span class="comment">//操作共享数据的代码，即为需要被同步的代码</span>
+}
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</li>
+<li><p>同步方法的锁：静态方法(类名.class)、 非静态方法(this)</p>
+</li>
+</ul>
+</li>
+<li><p>代码是否存在线程安全 </p>
+<ul>
+<li>明确哪些代码是多线程运行的代码。</li>
+<li>明确多个线程是否有共享数据。</li>
+<li>明确多线程运行代码中是否有多条语句操作共享数据。</li>
+</ul>
+</li>
+<li><p>释放锁的操作</p>
+<ul>
+<li>当前线程的同步方法、同步代码块 执行结束。</li>
+<li>当前线程在同步代码块、同步方法中遇到 break、return 终止了该代码块、该方法的继续执行。</li>
+<li>当前线程在同步代码块、同步方法中出现了未处理的 Error 或 Exception 导致异常结束。</li>
+<li>当前线程在同步代码块、同步方法中执行了线程对象的 wait() 方法，当前线程暂停，并释放锁。</li>
+</ul>
+</li>
+<li><p>不会释放锁的操作</p>
+<ul>
+<li><p>线程执行同步代码块或同步方法时，程序调用 Thread.sleep()、Thread.yield() 方法暂停当前线程的执行。</p>
+</li>
+<li><p>线程执行同步代码块时，其他线程调用了该线程的 suspend() 方法将该线程挂起，该线程不会释放锁（同步监视器）。</p>
+<blockquote>
+<p>应尽量避免使用 suspend() 和 resume() 来控制线程。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>线程的死锁问题</p>
+<ul>
+<li>不同的线程分别占用对方需要的同步资源不放弃，都在等待对方放弃自己需要的同步资源，就形成了线程的死锁。</li>
+<li>出现死锁后，不会出现异常，不会出现提示，只是所有的线程都处于阻塞状态，无法继续。</li>
+<li>解决方法<ul>
+<li>专门的算法</li>
+<li>尽量减少同步资源的定义</li>
+<li>尽量避免嵌套同步</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lock(JDK5)：通过显式定义同步锁Lock对象来实现同步。</p>
+<ul>
+<li><p>java.util.concurrent.locks.Lock 接口是控制多个线程对共享资源进行访问的工具。 锁提供了对共享资源的独占访问，每次只能有一个线程对 Lock 对象加锁，线程开始访问共享资源之前应先获得 Lock 对象 。</p>
+</li>
+<li><p>ReentrantLock 类实现了 Lock ，它拥有与 synchronized 相同的并发性和内存语义， 在实现线程安全的控制中，比较常用的是 ReentrantLock 可以显式加锁、释放锁 。</p>
+</li>
+<li><pre><code class="java"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>{
+    <span class="keyword">private</span> <span class="keyword">final</span> ReentrantLock lock = <span class="keyword">new</span> ReenTrantLock();
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>{
+        lock.lock();
+        <span class="keyword">try</span>{
+            <span class="comment">//保证线程安全的代码</span>
+        }
+        <span class="keyword">finally</span>{
+            lock.unlock();
+        }
+    }
+}</code></pre>
+</li>
+</ul>
+</li>
+<li><p>synchronized与 Lock 的对比</p>
+<ul>
+<li>Lock 是显式锁（手动开启和关闭锁）， synchronized 是隐式锁，出了作用域自动释放</li>
+<li>Lock 只有代码块锁， synchronized 有代码块锁和方法锁</li>
+<li>使用 Lock 锁， JVM 将花费较少的时间来调度线程，性能更好。并且具有更好的扩展性（提供更多的子类）</li>
+<li>考虑使用的顺序：Lock→同步代码块→同步方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-线程的通信"><a href="#6-线程的通信" class="headerlink" title="6 线程的通信"></a>6 线程的通信</h4><ul>
+<li><p>wait() 与 notify()、notifyAll()</p>
+<ul>
+<li>wait()：令当前线程挂起并放弃 CPU 、 同步资源并等待， 使别的线程可访问并修改共享资源，而当前线程排队等候其他线程调用 notify() 或 notifyAll() 方法唤醒，唤醒后等待重新获得对监视器的所有权后才能继续执行。</li>
+<li>notify()：唤醒正在排队等待同步资源的线程中优先级最高者。</li>
+<li>notifyAll()：唤醒正在排队等待资源的所有线程。</li>
+</ul>
+</li>
+<li><p>这三个方法只有在 synchronized 方法或 synchronized 代码块中才能使用，否则会报java.lang.IllegalMonitorStateException 异常。</p>
+</li>
+<li><p>因为这三个方法必须有锁对象调用，而任意对象都可以作为 synchronized 的同步锁，因此这三个方法只能在 Object 类中声明 。</p>
+</li>
+<li><p>sleep() 和 wait()</p>
+<ul>
+<li>相同点：一旦执行方法，都可以使得当前的线程进入阻塞状态。</li>
+<li>不同点：<ul>
+<li>两个方法声明的位置不同：Thread类中声明sleep() , Object类中声明wait()。</li>
+<li>调用的要求不同：sleep()可以在任何需要的场景下调用。 wait()必须使用在同步代码块或同步方法中。</li>
+<li>关于是否释放同步监视器：如果两个方法都使用在同步代码块或同步方法中，sleep()不会释放锁，wait()会释放锁。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/21/DailyCode/">
+                        <span class="hidden-mobile">每天的代码记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Java多线程&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

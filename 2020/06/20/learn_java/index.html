@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <link rel="icon" type="image/png" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Lnzh">
+  <meta name="keywords" content="">
+  <title>Java学习记录 - ZH&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ZH | Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://s1.ax1x.com/2020/06/20/NlLZh6.md.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-20 20:00">
+      2020年6月20日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      70
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="错误集"><a href="#错误集" class="headerlink" title="错误集"></a>错误集</h2><ul>
+<li><p>字符型与字符串声明</p>
+<pre><code class="hljs java"><span class="hljs-comment">// 排序输出</span>
+System.out.println(num3 + <span class="hljs-string">'&gt;'</span> + num1 + <span class="hljs-string">'&gt;'</span> + num2); <span class="hljs-comment">// ×</span>
+System.out.println(num3 + <span class="hljs-string">"&gt;"</span> + num1 + <span class="hljs-string">"&gt;"</span> + num2); <span class="hljs-comment">// √</span></code></pre>
+</li>
+<li><p>概念不清</p>
+<pre><code class="hljs java"><span class="hljs-comment">// 闰年判断条件</span>
+year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year/<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year/<span class="hljs-number">4</span> == <span class="hljs-number">0</span> <span class="hljs-comment">// ×</span>
+year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year%<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year%<span class="hljs-number">4</span> == <span class="hljs-number">0</span> <span class="hljs-comment">// √</span></code></pre>
+</li>
+<li><p>switch-case语句漏掉 break</p>
+</li>
+<li><p>编译错误：找不到符号</p>
+<pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">第一行代码中的点号是runoob那copy过来的</span>
+<span class="hljs-comment">第二行代码中的点号是自己打的，输入法检查了是英文半角，但就是会报错，很奇怪的情况，目前没有解决</span>
+<span class="hljs-comment">*/</span>
+System.out.println(option.equals( <span class="hljs-string">"不报错"</span> ));
+System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment">错误: 找不到符号</span>
+<span class="hljs-comment">			System.out.println(option.euqals( "报错" ));</span>
+<span class="hljs-comment">			                         ^</span>
+<span class="hljs-comment">  符号:   方法 euqals(String)</span>
+<span class="hljs-comment">  位置: 类型为String的变量 option</span>
+<span class="hljs-comment">1 个错误</span>
+<span class="hljs-comment">*/</span>
+<span class="hljs-comment">//解决了，不是点号的问题，单词拼写错了，我现在看自己就像是个傻子。</span>
+<span class="hljs-comment">//一直在关注提示的”符号“，没注意更基本的问题，他这个报错应该改成“找不到方法”更合适吧。</span></code></pre>
+
+
+</li>
+</ul>
+<ul>
+<li><p>数组空指针异常</p>
+<pre><code class="hljs java">Student[] stus = <span class="hljs-keyword">new</span> Student[<span class="hljs-number">20</span>];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; stus.length; i++) &#123;
+	<span class="hljs-comment">// 给数组元素赋值</span>
+	stus[i] = <span class="hljs-keyword">new</span> Student(); <span class="hljs-comment">// 开始漏了这一步，加强理解在内存中的情况</span>
+	<span class="hljs-comment">// 给Student对象的属性赋值</span>
+	stus[i].id = i + <span class="hljs-number">1</span>;
+	stus[i].age = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">4</span>) + <span class="hljs-number">17</span>;
+	stus[i].score = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">71</span>) + <span class="hljs-number">30</span>;
+&#125;</code></pre>
+
+
+</li>
+</ul>
+<ul>
+<li><p>Syntax error on token “printInfo”, Identifier expected after this token</p>
+<pre><code class="hljs java"><span class="hljs-comment">// 定义了一个Cylinder类，并在此测试</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review06</span> </span>&#123;
+		Cylinder c1 = <span class="hljs-keyword">new</span> Cylinder();
+		c1.printInfo(); <span class="hljs-comment">// 错误原因，应该在方法中调用，我这里忘记写main方法了</span>
+&#125;</code></pre>
+
+
+
+
+
+</li>
+</ul>
+<h2 id="零碎的知识"><a href="#零碎的知识" class="headerlink" title="零碎的知识"></a>零碎的知识</h2><ul>
+<li><p>资源管理器地址栏输入cmd回车直接在当前路径打开cmd</p>
+</li>
+<li><p><code>util</code>全称<strong>utility</strong>，意为有用的工具。</p>
+</li>
+<li><p>最近开始使用eclipse，但是写代码的过程中发现熟悉的<code>ctrl + /</code>不能注释代码，然后在<code>windows-&gt;perferences-&gt;general-&gt;key</code>找到Toggle Comment的快捷键确认是<code>ctrl+/</code>没错，而且我没有装任何输入法，也就是说不是外部快捷键冲突的问题，所以只能是软件本身有快捷键冲突，后来找到资料发现小键盘的<code>/</code>在这里是表示为<code>Numpad_Divide</code>，接着在设置里发现Toggle Folding的快捷键是<code>ctrl + Numpad_Divide</code>，将其改为别的就OK了。（顺便：*是Numpad_Multiply，+是Numpad_Add，-是Numpad_Subtract）</p>
+</li>
+<li><p>eclipse常用快捷键</p>
+<ul>
+<li>单行注释：<code>ctrl + /</code>或<code>ctrl + shift + C</code></li>
+<li>多行注释：<code>ctrl + shift + /</code></li>
+<li>删除当前行：<code>ctrl+d</code></li>
+<li>自动补全代码或者提示代码：<code>alt+/</code></li>
+<li>上下移动选中的行：<code>Alt+方向键上下</code></li>
+<li>复制选中的行：<code>Control+Alt+方向上下键</code></li>
+<li>格式化代码：<code>ctrl + shift + F</code></li>
+<li>快速修复：<code>ctrl + 1</code></li>
+<li>批量导入包：<code>ctrl + shift + o</code></li>
+<li>查看源代码：<code>ctrl + shift + t</code></li>
+<li>查看继承树：<code>ctrl + t</code></li>
+<li>显示类结构并支持搜索指定方法、属性等：<code>ctrl + o</code></li>
+<li>选中切换大写：<code>ctrl + shift + x</code></li>
+<li>选中切换小写：<code>ctrl + shift + y</code></li>
+<li>查看选中项属性：<code>alt + enter</code></li>
+<li>追踪选中单词：<code>ctrl + k</code></li>
+</ul>
+</li>
+<li><p>== 和 equals()</p>
+<ul>
+<li>== 运算符<ul>
+<li>基本数据类型比较的是变量存储的数据<ul>
+<li>基本数据类型可不同，如(<code>65==65.0</code>)和(<code>65==&#39;A&#39;</code>) 都是是<code>ture</code></li>
+</ul>
+</li>
+<li>引用数据类型比较的是两个对象的地址值，即是否指向同一个对象</li>
+</ul>
+</li>
+<li>equals()方法<ul>
+<li>只能用于引用数据类型</li>
+<li>Object类中定义的equals()与==的作用是相同的</li>
+<li>String、Date、File、包装类等的equals()方法都是重写过的，比较的不是地址值</li>
+</ul>
+</li>
+<li>通常自定义的类需要用到equals()方法时，也需要进行重写，主要比较对象相应的属性</li>
+</ul>
+</li>
+<li><p>Junit单元测试方法</p>
+<ul>
+<li>选中当前工程 - 右键选择：build path - add libraries - JUnit 4 - 下一步</li>
+<li><code>import org.junit.Test</code></li>
+<li>创建Java类<ul>
+<li>要求：此类是public、提供空参构造器</li>
+</ul>
+</li>
+<li>在类中声明单元测试方法(@Test)<ul>
+<li>要求：方法是public，没有返回值，没有形参</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>包装类</p>
+<ul>
+<li><p>使基本数据类型具有类的特征根</p>
+</li>
+<li><p>包装类的父类是<code>Number</code>类</p>
+</li>
+<li><p>基本数据类型 ←→ 包装类：自动装箱、自动拆箱(&gt;=JDK5.0)</p>
+</li>
+<li><p>基本数据类型、包装类 → <code>String</code>：调用String类的<code>valueOf(Xxx xxx)</code></p>
+</li>
+<li><p><code>String</code> → 基本数据类型、包装类：调用包装类的<code>parseXxx(String str)</code></p>
+<ul>
+<li>转换可能出现时<code>NumberFormatException</code></li>
+</ul>
+</li>
+<li><p><code>Integer</code>内部定义了<code>IntegerCache</code>结构，<code>IntegerCache</code>中定义了<code>Integer[]</code>，保存了-128~127范围内的整数，在使用自动装箱的方式给Integer对象赋值时，对于这个范围内的数会直接使用数组中的元素，而不是通过<code>new</code>，效率更高。</p>
+</li>
+</ul>
+</li>
+<li><p>单例设计模式</p>
+<ul>
+<li>减少系统性能开销</li>
+<li>饿汉式：好处：线程安全。坏处：对象加载时间过长</li>
+<li>懒汉式：好处：延迟对象创建。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="1-1-软件开发介绍"><a href="#1-1-软件开发介绍" class="headerlink" title="1.1 软件开发介绍"></a>1.1 软件开发介绍</h3><p>软件：数据+指令(算法)</p>
+<p>GUI(Graphic User Interface)：图形化界面</p>
+<p>CLI(Command Line Interface)：命令行方式</p>
+<p>API(Application Programming Interface)：应用程序编程接口</p>
+<p>常用DOS命令</p>
+<pre><code class="hljs dos"><span class="hljs-built_in">dir</span>：列出当前目录的文件(夹)
+<span class="hljs-built_in">md</span>：创建目录
+<span class="hljs-built_in">rd</span>：删除(空)目录
+<span class="hljs-built_in">del</span>：删除文件/目录
+<span class="hljs-keyword">exit</span>：退出DOS
+<span class="hljs-built_in">echo</span> hello&gt;<span class="hljs-number">1</span>.<span class="hljs-built_in">md</span></code></pre>
+
+<p>机器语言（指令以二进制代码形式存在）-&gt;  汇编语言（用注记符表示机器指令）</p>
+<h3 id="1-2-Java"><a href="#1-2-Java" class="headerlink" title="1.2 Java"></a>1.2 Java</h3><p>Java SE(Java Standard Edition)(桌面级应用)</p>
+<p>Java EE(Java Enterprise Edition)(Web应用)</p>
+<p>三个特点：</p>
+<ol>
+<li><p>面向对象</p>
+<ul>
+<li><p>类、对象</p>
+</li>
+<li><p>封装、继承、多态</p>
+</li>
+</ul>
+</li>
+<li><p>健壮性</p>
+<ul>
+<li>吸收C/C++的优点，去掉了指针、内存的申请释放等</li>
+</ul>
+</li>
+<li><p>跨平台性</p>
+<ul>
+<li>JVM(Java Virtual Machine)</li>
+</ul>
+</li>
+</ol>
+<p>两种核心机制：</p>
+<ol>
+<li><p>JVM</p>
+</li>
+<li><p>垃圾收集机制(Garbage Collection)</p>
+</li>
+</ol>
+<p>JDK(Java Development Kit)</p>
+<ul>
+<li>JDK = JRE + 开发工具集(javac编译工具等)</li>
+</ul>
+<p>JRE(Java Runtime Environment)</p>
+<ul>
+<li>JRE = JVM + Java SE标准类库</li>
+</ul>
+<h3 id="1-3-HelloWorld"><a href="#1-3-HelloWorld" class="headerlink" title="1.3 HelloWorld"></a>1.3 HelloWorld</h3><ol>
+<li><p>编写：HelloWorld.java</p>
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment">	<span class="hljs-doctag">@version</span> 1.0</span>
+<span class="hljs-comment">*/</span>
+<span class="hljs-comment">//java源文件中只能有一个类声明为public，且类名与文件名相同</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;
+    <span class="hljs-comment">/*</span>
+<span class="hljs-comment">    程序的入口是main()方法</span>
+<span class="hljs-comment">    */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
+        System.out.print(<span class="hljs-string">"Hello, World!"</span>); <span class="hljs-comment">// 不换行</span>
+        System.out.println(<span class="hljs-string">"Hello, World!"</span>);
+	&#125;
+&#125;</code></pre>
+</li>
+<li><p>编译：<code>javac HelloWorld.java</code></p>
+</li>
+</ol>
+<ul>
+<li>生成 .class文件(字节码文件，有几个类就生成几个)</li>
+</ul>
+<ol start="3">
+<li><p>运行：<code>java HelloWorld</code></p>
+<ul>
+<li>使用<code>java HelloWorld.class</code>报错是因为配置了classpath</li>
+</ul>
+</li>
+</ol>
+<p>大小写问题：cmd不区分，java内严格区分</p>
+<ul>
+<li><code>javac helloworld.java</code>：√</li>
+<li><code>java helloworld</code>：×<ul>
+<li>找不到或无法加载主类 helloworld</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-注释"><a href="#1-4-注释" class="headerlink" title="1.4 注释"></a>1.4 注释</h3><ul>
+<li>单行注释：<code>//</code></li>
+<li>多行注释：<code>/*        */</code></li>
+<li>文档注释：<code>/**       */</code>(可被javadoc解析)</li>
+</ul>
+<h3 id="1-5-命名"><a href="#1-5-命名" class="headerlink" title="1.5 命名"></a>1.5 命名</h3><ul>
+<li>包名：全小写xxyyzz</li>
+<li>类名、接口名：大驼峰XxYyZz</li>
+<li>变量名、方法名：小驼峰xxYyZz</li>
+<li>常量名：全大写(下划线分隔)XX_YY</li>
+</ul>
+<h3 id="1-6-变量"><a href="#1-6-变量" class="headerlink" title="1.6 变量"></a>1.6 变量</h3><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
+		System.out.println(<span class="hljs-string">"Hello World!"</span>);
+		<span class="hljs-keyword">byte</span> a1 = <span class="hljs-number">12</span>;
+		<span class="hljs-keyword">short</span> a2 = <span class="hljs-number">123</span>;
+		<span class="hljs-keyword">int</span> a3 = <span class="hljs-number">1234</span>;
+		<span class="hljs-keyword">long</span> a4 = <span class="hljs-number">12345l</span>;
+		<span class="hljs-keyword">float</span> f1 = <span class="hljs-number">1.2f</span>;
+		<span class="hljs-keyword">double</span> f2 = <span class="hljs-number">1.23</span>;
+		<span class="hljs-keyword">char</span> c1 = <span class="hljs-string">'a'</span>;
+    <span class="hljs-keyword">char</span> c2 = <span class="hljs-number">97</span>;<span class="hljs-comment">//效果同上，不建议使用</span>
+		String s = <span class="hljs-string">"abc"</span>;
+	&#125;
+&#125;</code></pre>
+
+<ul>
+<li><p>变量类型、变量名、存储的值</p>
+</li>
+<li><p>作用域</p>
+</li>
+<li><p>数据类型</p>
+<ul>
+<li>基本数据类型<ul>
+<li>整型：byte(1字节=8bit)、short(2B)、int(4B)、long(8B)<ul>
+<li>byte范围：-128 ~ 127</li>
+<li>long变量以”l”或”L”结尾：<code>long numLong = 123456L;</code></li>
+</ul>
+</li>
+<li>浮点型：float(4B)、double(8B)<ul>
+<li>float：7位有效数字，范围比long大，以”f”或”F”结尾</li>
+</ul>
+</li>
+<li>字符型：char(2B)<ul>
+<li>声明时用单引号：<code>char c1 = ’a&#39;;</code>(可以是单个字符、转义字符、Unicode，不能为空)</li>
+<li>与前面几种基本数据类型运算时是转为ASCII码进行数值运算</li>
+</ul>
+</li>
+<li>布尔型：boolean(true/false)<ul>
+<li>不能跟其他基本数据类型做运算</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引用数据类型<ul>
+<li>类：class<ul>
+<li>字符串：String<ul>
+<li>声明时用双引号：<code>String s1 = &quot;Hello&quot;;</code></li>
+<li>连接运算<code>+</code>，运算结果还是String</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>接口：interface</li>
+<li>数组：array</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>默认整型为int，浮点型为double</p>
+</li>
+<li><p>成员变量、局部变量</p>
+</li>
+</ul>
+<h3 id="1-7-运算"><a href="#1-7-运算" class="headerlink" title="1.7 运算"></a>1.7 运算</h3><ul>
+<li>自动类型提升<ul>
+<li><code>long l1 = 123;</code></li>
+</ul>
+</li>
+<li>强制类型转换<ul>
+<li>可能出现精度损失<code>int a = (int)12.3;</code></li>
+<li>boolean不能转为其他的数据类型</li>
+</ul>
+</li>
+<li>byte、char、short相互运算结果都为int型</li>
+</ul>
+<h3 id="1-8-进制"><a href="#1-8-进制" class="headerlink" title="1.8 进制"></a>1.8 进制</h3><ul>
+<li>二进制：<strong>0b</strong>或<strong>0B</strong>开头<ul>
+<li>原码、反码、补码<ul>
+<li>正数原反补相同</li>
+<li>负数补码=反码+1</li>
+</ul>
+</li>
+<li>计算机底层以补码的方式存储数据</li>
+</ul>
+</li>
+<li>八进制：<strong>0</strong>开头(0123)</li>
+<li>十六进制：<strong>0x</strong>或<strong>0X</strong>开头，A-F不区分大小写</li>
+</ul>
+<h3 id="1-9-运算符"><a href="#1-9-运算符" class="headerlink" title="1.9 运算符"></a>1.9 运算符</h3><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">算术运算符</td>
+<td align="center">+、-、*、/、%、++、–</td>
+</tr>
+<tr>
+<td align="center">比较运算符</td>
+<td align="center">==、!=、&lt;、&gt;、&lt;=、&gt;=、instanceof</td>
+</tr>
+<tr>
+<td align="center">逻辑运算符</td>
+<td align="center">&amp;、&amp;&amp;、|、||、!、^</td>
+</tr>
+<tr>
+<td align="center">位运算符</td>
+<td align="center">&lt;&lt;、&gt;&gt;、&gt;&gt;&gt;、&amp;、|、^、~</td>
+</tr>
+<tr>
+<td align="center">三元运算符</td>
+<td align="center"><code>(条件表达式) ? 表达式1 : 表达式2;</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><code>instanceof</code>: 检查是否是类的对象</p>
+<ul>
+<li><code>“Hello” instanceof String</code>    –&gt;    <code>true</code></li>
+</ul>
+</li>
+<li><p>逻辑运算符注</p>
+<ul>
+<li><code>&amp;</code>、<code>|</code>、<code>^</code>: 逻辑与、逻辑或、逻辑异或</li>
+<li><code>&amp;&amp;</code>: 短路与(左边为假，右边不运算)</li>
+<li><code>||</code>: 短路或(左边为真，右边不运算)</li>
+</ul>
+</li>
+<li><p>位运算符</p>
+<ul>
+<li><code>&lt;&lt;</code>：左移，被移除的高位丢弃，空缺位补0</li>
+<li><code>&gt;&gt;</code>：右移，被移位的二进制最高位是0，右移后，空缺位补0； 最高位是1，空缺位补1。</li>
+<li><code>&gt;&gt;&gt;</code>：无符号右移，被移位二进制最高位无论是0或者是1，空缺位都用0补。</li>
+<li><code>&amp;</code>、<code>|</code>、<code>^</code>、<code>~</code>：对应位置与运算、或运算、异或运算、取反运算</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-10-流程控制"><a href="#1-10-流程控制" class="headerlink" title="1.10 流程控制"></a>1.10 流程控制</h3><ul>
+<li><p>顺序结构</p>
+</li>
+<li><p>分支结构</p>
+<ul>
+<li>if-else<ul>
+<li>“小上大下/子上父下”</li>
+<li>else就近配对</li>
+</ul>
+</li>
+<li>switch-case<ul>
+<li>switch后的表达式只能用：byte、short、int、char、String类型、枚举类型</li>
+<li>case后的值必须是常量，不能是变量名或不确定的表达式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>循环结构</p>
+<ul>
+<li>for<ul>
+<li><code>for(int i = 1; i &lt;= 5; i++){}</code></li>
+<li>i只在for循环内有效；(for作用域？局部变量？)</li>
+</ul>
+</li>
+<li>while<ul>
+<li><code>while(i &lt;= 5){i++;}</code></li>
+</ul>
+</li>
+<li>do-while<ul>
+<li><code>do{i++;}while(i &lt;= 5);</code></li>
+<li>先执行一次循环体</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>continue</code>、<code>break</code></p>
+<ul>
+<li>就近原则</li>
+<li>跳出外层循环<code>label: while(true){ while(true){break label;} }</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-11-项目1"><a href="#1-11-项目1" class="headerlink" title="1.11 项目1"></a>1.11 项目1</h3><p><strong>家庭收支记账软件</strong></p>
+<p>需求：界面包括：1. 收支明细 2. 登记收入 3. 登记支出 4. 退出 5. 输入提示</p>
+<p>思路：</p>
+<ul>
+<li>↓打印界面<ul>
+<li>while无限循环来打印主界面，break或者return退出</li>
+<li>用String接收选项，方便处理”异常“</li>
+<li>输入错误信息需提示并重新输入</li>
+<li>switch-case处理每个选项</li>
+</ul>
+</li>
+<li>↓输入信息<ul>
+<li>1    →    打印收支明细<ul>
+<li>序号、当前金额、收支金额(+-表示)、说明<ul>
+<li>金额用int方便计算</li>
+<li>收支明细使用String类存储</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2    →    登记收入<ul>
+<li>键盘输入金额和说明<ul>
+<li>金额用int</li>
+<li>说明用String</li>
+</ul>
+</li>
+<li>存储到收支明细(利用字符串拼接)</li>
+</ul>
+</li>
+<li>3    →    登记支出<ul>
+<li>同上</li>
+</ul>
+</li>
+<li>4    →    退出<ul>
+<li>输出确认信息<ul>
+<li>String接收y/n确认信息，注意大小写</li>
+</ul>
+</li>
+<li>不退出重新打印界面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>代码见DailyCode/Day03-0621</p>
+</blockquote>
+<h3 id="1-12-数组"><a href="#1-12-数组" class="headerlink" title="1.12 数组"></a>1.12 数组</h3><ul>
+<li><p>数组是引用类型，其元素可以是任何数据类型</p>
+</li>
+<li><p>连续的内存空间</p>
+</li>
+<li><p>长度确定后不能修改</p>
+</li>
+<li><p>初始化</p>
+<ul>
+<li>静态初始化：初始化同时赋值</li>
+<li>动态初始化：初始化时不赋值</li>
+<li>整型初始化默认值为0，浮点型为0.0，字符型为(ASCII的)0或’\u0000’，布尔型是false，引用类型为null</li>
+</ul>
+</li>
+<li><p>一维数组内存解析</p>
+<ul>
+<li>栈(stack)：局部变量</li>
+<li>堆(heap)：new出来的结构：对象、数组</li>
+<li>在堆里分配一定的连续内存空间，在栈里存储指向该内存空间的首地址</li>
+</ul>
+</li>
+<li><p>二维数组</p>
+<ul>
+<li>[[I@6d06d69c</li>
+<li>[[二维数组I整型@6d…地址为6d…</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-13-笔试常见算法"><a href="#1-13-笔试常见算法" class="headerlink" title="1.13 笔试常见算法"></a>1.13 笔试常见算法</h3><ul>
+<li>算法的5个特征：输入、输出、有穷性、确定性、可行性</li>
+<li>数组元素赋值(杨辉三角形、回形数)</li>
+<li>数组的复制、反转、<em>查找</em>(线性查找、二分法查找)</li>
+<li>排序算法<ul>
+<li>时间复杂度、空间复杂度</li>
+<li>稳定性：关键字相等，排序后次序不变</li>
+<li>选择排序<ul>
+<li>直接选择排序、 <em>堆排序</em></li>
+</ul>
+</li>
+<li>交换排序<ul>
+<li><strong>冒泡排序</strong> 、 <strong>快速排序</strong></li>
+</ul>
+</li>
+<li>插入排序<ul>
+<li>直接插入排序、 折半插入排序、 Shell 排序</li>
+</ul>
+</li>
+<li><em>归并排序</em></li>
+<li>桶式排序</li>
+<li>基数排序</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-14-面向对象"><a href="#1-14-面向对象" class="headerlink" title="1.14 面向对象"></a>1.14 面向对象</h3><blockquote>
+<ol>
+<li>Java类及类的成员：属性、方法、构造器；代码块、内部类</li>
+</ol>
+<ul>
+<li>属性 == 成员变量 == field == 域\字段</li>
+<li>方法 == 成员方法 == method == 函数</li>
+<li>创建对象 == 类的实例化</li>
+</ul>
+<ol start="2">
+<li><p>面向对象的三大特征：封装性、继承性、多态性、(抽象性)</p>
+</li>
+<li><p>其他关键字：<code>this</code>、<code>super</code>、<code>static</code>、<code>final</code>、<code>abstract</code>、<code>interface</code>、<code>package</code>、<code>import</code></p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>类：对一类事物的描述，是抽象的 </p>
+</li>
+<li><p>对象：实际存在的个体，实例</p>
+<ul>
+<li>匿名对象：不赋值给变量，只调用一次</li>
+</ul>
+</li>
+<li><p>内存解析</p>
+<ul>
+<li>堆：存放实例对象</li>
+<li>栈：存储局部变量</li>
+<li>方法区：存储类信息、常量、静态变量</li>
+</ul>
+</li>
+<li><p>属性</p>
+<ul>
+<li><p>初始化顺序：默认初始化、显示初始化/代码块初始化、构造器初始化、调用setXxx方法</p>
+</li>
+<li><p>属性(成员变量) 和 局部变量</p>
+<ul>
+<li><p>相同点</p>
+<ul>
+<li>定义的格式相同</li>
+<li>先声明在使用</li>
+<li>有对应的作用域</li>
+</ul>
+</li>
+<li><p>不同点</p>
+<ul>
+<li><p>在类中声明的位置不同</p>
+<ul>
+<li>属性：直接在类的{}内</li>
+<li>局部变量：声明在方法内、方法形参、代码块内、构造器形参、构造器内部的变量</li>
+</ul>
+</li>
+<li><p>权限修饰符不同</p>
+<ul>
+<li>属性：可以在声明时指明其权限，使用权限修饰符<ul>
+<li><code>private</code>、<code>public</code>、<code>protected</code>、缺省</li>
+</ul>
+</li>
+<li>局部变量：不可以使用权限修饰符</li>
+</ul>
+</li>
+<li><p>默认初始化值</p>
+<ul>
+<li>属性：根据其类型都有默认初始化值</li>
+<li>局部变量：没有默认初始化值，需要显式赋值</li>
+</ul>
+</li>
+<li><p>在内存中加载的位置</p>
+<ul>
+<li>属性：加载到堆空间（非static）</li>
+<li>局部变量：加载的栈空间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li>可以调用当前类的属性或方法</li>
+<li>方法的重载(overload)：<strong>同一个类</strong>中，可以有多个<strong>同名的方法</strong>，只要<strong>参数不同</strong>即可(类型、个数)</li>
+<li>方法的重写(override/overwrite)：子类继承父类以后可以对父类中同名同参数的方法进行覆盖操作<ul>
+<li><code>权限修饰符 返回值类型 方法名(形参列表) throws 异常的类型{}</code></li>
+<li>子类重写的方法 方法名和形参列表 与 父类被重写的方法 方法名和形参列表 相同</li>
+<li>子类重写的方法 权限修饰符不小于被重写的方法的权限修饰符<ul>
+<li>特殊：子类不能重写父类中声明为private权限的方法</li>
+</ul>
+</li>
+<li>返回值类型<ul>
+<li>父类被重写的方法返回值类型为void，则子类重写的方法返回值类型只能是void</li>
+<li>————————————-某一个类，则———————————————-该类或该类的子类</li>
+</ul>
+</li>
+<li>———————————-基本数据类型，——————————————–相同的基本数据类型</li>
+<li>子类重写的方法抛出的异常类型不大于父类被重写的方法抛出的异常类型</li>
+<li>static(不是重写)</li>
+</ul>
+</li>
+<li>可变个数的形参(&gt;= jdk5.0)：<code>数据类型 ... 形参名</code><ul>
+<li>传入参数可以是0个或者多个</li>
+<li>与传入为同类型数组的方法不构成重载</li>
+<li>传入多个形参的方法中可变个数形参必须放在最后且只能有一个</li>
+</ul>
+</li>
+<li>值传递机制<ul>
+<li>基本数据类型传递数据值，引用数据类型传递地址值</li>
+</ul>
+</li>
+<li>递归(recursion)：方法内调用自己<ul>
+<li>递归一定要向已知方向递归，否则这种递归就变成了无穷递归</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构造器(构造方法、constructor)</p>
+<ul>
+<li>作用：1. 创建对象 2. 初始化对象的信息</li>
+<li>创建类的对象：<code>类名 变量名 = new  构造器;</code></li>
+<li>定义构造器(类内)：<code>权限修饰符 类名(形参列表) {}</code><ul>
+<li>如果没有定义，系统默认提供空参的构造器(权限与类相同)</li>
+</ul>
+</li>
+<li>可以重载</li>
+</ul>
+</li>
+<li><p>代码块</p>
+<ul>
+<li>静态：随着类加载而执行，只执行一次</li>
+<li>非静态：随着对象创建而执行，每创建一个对象执行一次</li>
+</ul>
+</li>
+<li><p>封装和隐藏</p>
+<ul>
+<li>Java提供了4种权限修饰符来修饰类及类的内部结构、体现类及类的内部结构在被调用时可见性的大小。</li>
+<li>权限修饰符(小→大)：private、缺省、protected、public<ul>
+<li>可修饰类的内部结构：属性、方法、构造器、内部类</li>
+<li>修饰类只能用：缺省、public</li>
+<li>不同包的不同类(非父类子类关系)，只能调用public的方法或属性</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">修饰符</th>
+<th align="center">类内部</th>
+<th align="center">同一个包</th>
+<th align="center">不同包的子类</th>
+<th align="center">同一个工程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">private</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">(缺省)</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">protected</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">public</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>继承</p>
+<ul>
+<li><code>权限修饰符 class 子类名 extends 父类名 {}</code><ul>
+<li>子类、派生类、subclass</li>
+<li>父类、超类、基类、superclass</li>
+</ul>
+</li>
+<li>好处<ul>
+<li>减少代码冗余，提高了代码的复用性</li>
+<li>便于功能的拓展</li>
+<li>为多态性的使用提供了前提</li>
+</ul>
+</li>
+<li>子类继承了父类所有的属性和方法</li>
+<li>所有类都直接或间接的继承于<code>java.lang.Object</code>类</li>
+<li>Java中继承性的规定<ul>
+<li>一个类可以被多个类继承</li>
+<li>Java<strong>类</strong>的单继承性：一个类只能有一个父类</li>
+<li>多层继承(直接父类、间接父类)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>多态性</p>
+<ul>
+<li>对象的多态性：父类的引用指向子类的对象</li>
+<li>多态性的使用：只能调用父类中声明过的方法，实际执行的是子类重写后的方法——虚拟方法调用<ul>
+<li>调用子类特有的属性和方法：强制类型转换</li>
+<li>可能出现<code>ClassCastException</code>异常，应先用<code>instanceof</code>判断对象是否是相应类(或其父类)的实例</li>
+</ul>
+</li>
+<li>只适用于方法，不适用于属性</li>
+<li>运行时行为</li>
+</ul>
+</li>
+<li><p>拓展</p>
+<ul>
+<li>main()方法<ul>
+<li>main()方法作为程序的入口</li>
+<li>main()方法也是一个普通的静态方法</li>
+<li>main()方法可以作为我们与控制台交互的方式。（之前：使用Scanner）<ul>
+<li>从控制台将数据传给形参：String[] args</li>
+<li>运行时：java 类名 “Tom” “Jerry” “123” “true”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Javabean</li>
+<li>UML<ul>
+<li>+表示public，-表示private，#表示protected</li>
+<li>属性写法：属性的权限 属性名：属性的类型</li>
+<li>方法写法：方法的权限  方法名（参数名：参数类型）：返回类型</li>
+</ul>
+</li>
+<li>MVC设计模式<ul>
+<li>视图模型层 <strong>view</strong> 显示数据<ul>
+<li>相关工具类<code>view.utils</code></li>
+<li>自定义view <code>view.ui</code></li>
+</ul>
+</li>
+<li>控制器层 <strong>controller</strong> 处理业务逻辑<ul>
+<li>应用界面相关<code>controller.activity</code></li>
+<li>存放fragment <code>controller.fragment</code></li>
+<li>显示列表的适配器<code>controller.adapter</code></li>
+<li>服务相关的<code>controller.service</code></li>
+<li>抽取的基类<code>controller.base</code></li>
+</ul>
+</li>
+<li>数据模型层 <strong>model</strong> 主要处理数据<ul>
+<li>数据对象封装<code>model.bean</code>/<code>model.domain</code></li>
+<li>数据库操作类<code>model.dao</code></li>
+<li>数据库<code>model.db</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关键字</p>
+<ul>
+<li><code>this</code>(类比python的self)<ul>
+<li>可以用来修饰属性、方法、构造器(必须放在首行，注意避免死循环)</li>
+<li>通常省略，如果方法的形参和类的属性同名时就得显式使用：<code>this.name = name;</code></li>
+</ul>
+</li>
+<li><code>super</code><ul>
+<li>调用父类的属性和方法(类比this)</li>
+<li>构造器内的使用<ul>
+<li>在子类构造器中显式使用<code>super(形参列表)</code>的方式调用父类中声明的构造器</li>
+<li><code>this(形参列表)</code>和<code>super(形参列表)</code>都要要求在首行，因此只能选其一<ul>
+<li>都没有显式写时，其实默认有父类的空参构造器，因此父类必须有空参构造器，否则报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>static</code><ul>
+<li>可以修饰属性、方法、代码块、内部类</li>
+<li>静态属性、静态变量、类变量<ul>
+<li>类的多个对象共享同一个静态属性，任何一个对象修改了静态属性，其他对象调用该属性时也是修改之后的</li>
+<li>可通过<code>类.静态变量</code>调用</li>
+<li>静态变量随着类加载，因此要早于对象的创建</li>
+<li>类只会加载一次，静态变量在内存中也只会存在一份，存在方法区的静态域中</li>
+</ul>
+</li>
+<li>静态方法<ul>
+<li>可通过<code>类.静态方法</code>调用</li>
+<li>随着类加载</li>
+</ul>
+</li>
+<li>静态方法中只能调用静态的方法或属性，不能用<code>this</code>、<code>super</code>关键词</li>
+</ul>
+</li>
+<li><code>final</code><ul>
+<li>可以修饰类、方法、变量</li>
+<li>修饰类时：不能被其他类继承，如String、System、StringBuffer</li>
+<li>修饰方法时：不能被重写，如getClass()</li>
+<li>修饰变量时：变成常量<ul>
+<li>属性：显式初始化、代码块中初始化、构造器初始化</li>
+<li>局部变量：修饰形参时，表明此形参是常量，在方法体内不能修改其值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>abstract</code><ul>
+<li>可以修饰类、方法</li>
+<li>修饰类时：不能实例化，有构造器(子类实例化时调用)</li>
+<li>修饰方法时：只有方法声明，没有方法体<ul>
+<li><code>权限修饰符 abstract 返回类型 方法名();</code></li>
+<li>有抽象方法的类一定是抽象类</li>
+<li>子类必须重写(直接+间接)父类所有的的抽象方法才可实例化，否则也要用abstract修饰</li>
+</ul>
+</li>
+<li>不能修饰属性、构造器等结构</li>
+<li>不能修饰私有方法、静态方法、final的方法、final的类</li>
+<li>抽象类的匿名子类<ul>
+<li>抽象类名 变量名 = new 抽象类名() {重写抽象方法} ;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>package</code><ul>
+<li>实现类的管理</li>
+<li>在源文件的首行使用package声明类或接口所属的包</li>
+<li>每”.”一次代表一层文件目录</li>
+</ul>
+</li>
+<li><code>import</code><ul>
+<li>在源文件中显式导入指定包下的类或接口</li>
+<li><code>java.lang</code>和 本包 中定义的类或接口，可以省略</li>
+<li>使用同名类时，则至少要有一个使用<strong>全类名</strong></li>
+<li>使用子包下的类需要显式导入</li>
+<li><code>import static</code> + 包名  可以导入指定类或接口中的<strong>静态结构</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Object类</p>
+<ul>
+<li><code>equals()</code><ul>
+<li>比较两个对象的地址值</li>
+</ul>
+</li>
+<li><code>toString()</code><ul>
+<li>返回：类@地址值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>接口<code>interface</code></p>
+<ul>
+<li>Java中接口和类是并列的两个结构</li>
+<li>接口中不能定义构造器，即不能实例化</li>
+<li>版本区别<ul>
+<li>JDK7及以前只能定义全局常量和抽象方法<ul>
+<li>全局常量：public static final 类型 xxx;//修饰符可省略</li>
+<li>抽象方法：public abstract 返回值类型 xxx();//同上</li>
+</ul>
+</li>
+<li>JDK8新增静态方法(static)和默认方法(default)<ul>
+<li>接口中定义的静态方法，只能通过<code>接口名.方法()</code>调用</li>
+<li>实现类的对象可以调用接口中的默认方法</li>
+<li>实现类的父类和接口中声明了同名同参数的默认方法，若未重写，调用父类的该方法</li>
+<li>实现类实现的多个接口中声明了同名同参数的默认方法，若未重写，编译报错(接口冲突)</li>
+<li>实现类内调用特定接口的默认方法：<code>接口名.super.方法()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Java开发中，接口通过类 实现(<code>implements</code>)的方式使用<ul>
+<li>类 实现 了接口中所有抽象方法之后，则此实现类可以实例化，否则为抽象类</li>
+</ul>
+</li>
+<li>Java类可以实现多个接口，弥补了类但继承性的局限性<ul>
+<li><code>class A extends B implements C, D, E { }</code></li>
+</ul>
+</li>
+<li>接口的多继承<ul>
+<li><code>interface A extends B, C { }</code></li>
+</ul>
+</li>
+<li>接口的使用体现多态性</li>
+</ul>
+</li>
+<li><p>内部类</p>
+<ul>
+<li>成员内部类(静态、非静态)<ul>
+<li>作为外部类的成员<ul>
+<li>可以调用外部类的结构(外部类名.this.结构(没有重名的可以省略前两个))</li>
+<li>可以static修饰</li>
+<li>可以被四种不同的权限修饰</li>
+</ul>
+</li>
+<li>作为一个类<ul>
+<li>类内可以定义属性、方法、构造器等</li>
+<li>可以用final、abstract修饰</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>局部内部类(方法、代码块、构造器内)</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-15-异常"><a href="#1-15-异常" class="headerlink" title="1.15 异常"></a>1.15 异常</h3><ul>
+<li><p>Error：JVM虚拟机无法解决的严重问题</p>
+<ul>
+<li>JVM系统内部错误、资源耗尽，如StackOverflow、OOM</li>
+</ul>
+</li>
+<li><p>Exception：编程错误或者偶然的外在因素导致的一般性问题</p>
+<ul>
+<li>如空指针访问、数组越界、读取不存在的文件、网络连接中断</li>
+</ul>
+</li>
+<li><p>java.lang.Throwable</p>
+<ul>
+<li>java.lang.Error：一般不编写针对性的代码进行处理。</li>
+<li>java.lang.Exception：可以进行异常的处理<ul>
+<li>编译时异常(checked)<ul>
+<li>IOException</li>
+<li>FileNotFoundException</li>
+<li>ClassNotFoundException</li>
+</ul>
+</li>
+<li>运行时异常(unchecked，RuntimeException)<ul>
+<li>NullPointerException</li>
+<li>ArrayIndexOutOfBoundsException</li>
+<li>ClassCastException</li>
+<li>NumberFormatException</li>
+<li>InputMismatchException</li>
+<li>ArithmeticException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>try{  }catch(XxxException e){  }catch(YyyException e){  }...finally{  }</code></p>
+<ul>
+<li>try-catch-finally语句可嵌套</li>
+<li>try中的代码出现异常时，会生成一个异常类的对象，根据对象的类型在catch中匹配</li>
+<li>常用的异常对象处理的方式：String  getMessage() 、void printStackTrace()</li>
+<li>子类的异常处理要求在父类异常处理的前面</li>
+<li>finally<ul>
+<li>可不写</li>
+<li>一旦写了，则声明的代码一定会执行，即使catch中又出现异常、或者try和catch中有return语句(finally中的代码在return之前执行)</li>
+<li>JVM不能自动回收数据库连接、输入输出流、网络编程socket等资源，这些需要手动释放资源的操作应当写到finally中</li>
+</ul>
+</li>
+<li>使用该语句处理异常相当于是把编译时异常变成运行时异常</li>
+</ul>
+</li>
+<li><p><code>修饰符 返回值 方法名() throws XxxException, YyyException {  }</code></p>
+<ul>
+<li>方法体内出现的异常匹配throws声明的异常时，会将此异常类的对象抛出，后续代码不会执行</li>
+<li>父类中被重写的方法没有throws方式处理异常，子类重写的方法也不能使用throws</li>
+<li>执行一系列递进的方法时，建议只在最外层方法使用try-catch语句，内层方法使用throws</li>
+</ul>
+</li>
+<li><p>手动抛出异常：<code>throw new XxxException();</code></p>
+</li>
+<li><p>自定义异常类</p>
+<ul>
+<li>继承于现有的异常结构：RuntimeException、Exception等</li>
+<li>提供全局常量：serialVersionUID</li>
+<li>提供重载的构造器</li>
+</ul>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/21/DailyCode/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">每天的代码记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/06/%E5%86%99%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">
+                        <span class="hidden-mobile">写的乱七八糟</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Java学习记录&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

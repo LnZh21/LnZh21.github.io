@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <link rel="icon" type="image/png" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Lnzh">
+  <meta name="keywords" content="">
+  <title>每天的代码记录 - ZH&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ZH | Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://s1.ax1x.com/2020/06/21/N1yDIA.md.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-21 08:30">
+      2020年6月21日 早上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      102
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="DailyCode"><a href="#DailyCode" class="headerlink" title="DailyCode"></a>DailyCode</h2><h3 id="Day02-0620"><a href="#Day02-0620" class="headerlink" title="Day02-0620"></a>Day02-0620</h3><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">1. 三目运算符</span>
+<span class="hljs-comment">2. if-else语句</span>
+<span class="hljs-comment">3. 使用Scanner类进行输入</span>
+<span class="hljs-comment">4. Math.random() 产生随机数</span>
+<span class="hljs-comment">5. str1.equals(str2) 字符串比较</span>
+<span class="hljs-comment">6. switch-case语句</span>
+<span class="hljs-comment">*/</span>
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DailyTest</span></span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
+		<span class="hljs-comment">// 三元运算符判断三个数中最大的</span>
+		<span class="hljs-keyword">int</span> num1 = <span class="hljs-number">12</span>, num2 = <span class="hljs-number">21</span>, num3 = <span class="hljs-number">26</span>;
+		<span class="hljs-keyword">int</span> maxNum = (num1 &gt; num2)? num1 : num2;
+		maxNum = (maxNum &gt; num3)? maxNum : num3;
+		System.out.println(<span class="hljs-string">"num1 = 12, num2 = 21, num3 = 26, maxNum = "</span> + maxNum);
+
+
+		<span class="hljs-comment">// 从控制台获取变量，Scanner类</span>
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+
+		<span class="hljs-comment">// 整型输入</span>
+		System.out.print(<span class="hljs-string">"input three int: "</span>);
+		num1 = scan.nextInt();
+		num2 = scan.nextInt();
+		num3 = scan.nextInt();
+		<span class="hljs-comment">// System.out.println(num3 + '&gt;' + num1 + '&gt;' + num2);</span>
+		<span class="hljs-comment">// if-else 语句从小到大三个数排序</span>
+		<span class="hljs-keyword">if</span>(num1 &gt; num2)&#123;
+			<span class="hljs-keyword">if</span>(num3 &gt; num1)&#123;
+				System.out.println(num3 + <span class="hljs-string">"&gt;"</span> + num1 + <span class="hljs-string">"&gt;"</span> + num2);
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(num3 &gt; num2) &#123;
+				System.out.println(num1 + <span class="hljs-string">"&gt;"</span> + num3 + <span class="hljs-string">"&gt;"</span> + num2);
+			&#125;<span class="hljs-keyword">else</span>&#123;
+				System.out.println(num1 + <span class="hljs-string">"&gt;"</span> + num2 + <span class="hljs-string">"&gt;"</span> + num3);
+			&#125;
+		&#125;<span class="hljs-keyword">else</span>&#123;
+			<span class="hljs-keyword">if</span>(num3 &gt; num2) &#123;
+				System.out.println(num3 + <span class="hljs-string">"&gt;"</span> + num2 + <span class="hljs-string">"&gt;"</span> + num1);
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(num3 &lt; num1)&#123;
+				System.out.println(num2 + <span class="hljs-string">"&gt;"</span> + num1 + <span class="hljs-string">"&gt;"</span> + num3);
+			&#125;<span class="hljs-keyword">else</span>&#123;
+				System.out.println(num2 + <span class="hljs-string">"&gt;"</span> + num3 + <span class="hljs-string">"&gt;"</span> + num1);
+			&#125;
+		&#125;
+
+
+		<span class="hljs-comment">// 浮点型输入</span>
+		System.out.print(<span class="hljs-string">"input a double: "</span>);
+		<span class="hljs-keyword">double</span> num5 = scan.nextDouble();
+		System.out.println(num5);
+
+
+		<span class="hljs-comment">// 布尔型输入</span>
+		System.out.print(<span class="hljs-string">"input a boolean: "</span>);
+		<span class="hljs-keyword">boolean</span> trueorfalse = scan.nextBoolean();
+		System.out.println(trueorfalse);
+
+
+		<span class="hljs-comment">// 字符串输入</span>
+		System.out.print(<span class="hljs-string">"input a String: "</span>);
+		String str = scan.next();
+		System.out.println(str);
+
+
+		<span class="hljs-comment">// 生成随机数</span>
+		<span class="hljs-keyword">int</span> value = (<span class="hljs-keyword">int</span>)(Math.random() * <span class="hljs-number">90</span> + <span class="hljs-number">10</span>);
+		<span class="hljs-comment">// [0.0, 1.0) --&gt; [0.0, 90.0) --&gt; [10.0, 100.0) --&gt; [10, 99]</span>
+		System.out.println(<span class="hljs-string">"random value = "</span> + value);
+
+		<span class="hljs-comment">// switch-case 前面随机数，若其大于60则输出及格，否则不及格</span>
+		<span class="hljs-keyword">switch</span>(value / <span class="hljs-number">60</span>)&#123;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+				System.out.println(<span class="hljs-string">"不及格"</span>);
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+				System.out.println(<span class="hljs-string">"及格"</span>);
+				<span class="hljs-keyword">break</span>;
+		&#125;
+
+
+		<span class="hljs-comment">//switch-case 从键盘输入年月日，输出该日期为当年第几天</span>
+		System.out.print(<span class="hljs-string">"which year："</span>);
+		<span class="hljs-keyword">int</span> year = scan.nextInt();
+		System.out.print(<span class="hljs-string">"which month："</span>);
+		<span class="hljs-keyword">int</span> month = scan.nextInt();
+		System.out.print(<span class="hljs-string">"which day："</span>);
+		<span class="hljs-keyword">int</span> day = scan.nextInt();
+
+		<span class="hljs-keyword">int</span> daySum = <span class="hljs-number">0</span>;
+
+		<span class="hljs-keyword">switch</span>(month)&#123;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">12</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">11</span>:
+				daySum += <span class="hljs-number">30</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:
+				daySum += <span class="hljs-number">30</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+				daySum += <span class="hljs-number">30</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+				daySum += <span class="hljs-number">30</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+				daySum += <span class="hljs-number">31</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+				<span class="hljs-keyword">if</span> (year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year%<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year%<span class="hljs-number">4</span> == <span class="hljs-number">0</span>)) &#123;
+					daySum += <span class="hljs-number">29</span>;
+				&#125;<span class="hljs-keyword">else</span>&#123;
+					daySum += <span class="hljs-number">28</span>;
+				&#125;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+				daySum += day;
+				System.out.println(year+<span class="hljs-string">"/"</span>+month+<span class="hljs-string">"/"</span>+day+<span class="hljs-string">" is No."</span>+daySum+<span class="hljs-string">" day in this year."</span>);
+		&#125;
+
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day03-0621"><a href="#Day03-0621" class="headerlink" title="Day03-0621"></a>Day03-0621</h3><h4 id="DailyCode-1"><a href="#DailyCode-1" class="headerlink" title="DailyCode"></a>DailyCode</h4><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">	1. for循环</span>
+<span class="hljs-comment">	2. while循环</span>
+<span class="hljs-comment">	3. do-while循环</span>
+<span class="hljs-comment">	4. 循环嵌套</span>
+<span class="hljs-comment">	5. 输出给定范围内的质数</span>
+<span class="hljs-comment">	6. 开方 Math.sqrt() 返回double</span>
+<span class="hljs-comment">	6. 时间戳 System.currentTimeMillis() 返回long</span>
+<span class="hljs-comment">*/</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DailyCode</span></span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
+		
+		<span class="hljs-comment">// 三位数的水仙花数</span>
+		System.out.println(<span class="hljs-string">"三位数的水仙花数"</span>);
+		<span class="hljs-keyword">int</span> bai = <span class="hljs-number">0</span>, shi = <span class="hljs-number">0</span>, ge = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">100</span>; i &lt; <span class="hljs-number">1000</span>; i++ ) &#123;
+			bai = i / <span class="hljs-number">100</span>;
+			shi = (i - <span class="hljs-number">100</span>*bai) / <span class="hljs-number">10</span>;
+			ge = (i - <span class="hljs-number">100</span>*bai - <span class="hljs-number">10</span>*shi);
+			<span class="hljs-keyword">if</span> (i == bai*bai*bai + shi*shi*shi + ge*ge*ge) &#123;
+				System.out.println(i);
+			&#125;
+		&#125;
+
+        <span class="hljs-comment">// 使用label跳出外层循环</span>
+		label: <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123; <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;<span class="hljs-keyword">break</span> label;&#125; &#125;
+
+        <span class="hljs-comment">// 10w以内的质数</span>
+		System.out.println(<span class="hljs-string">"十万以内的质数"</span>);
+        <span class="hljs-keyword">long</span> start = System.currentTimeMillis();
+		
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">boolean</span> isPrime = <span class="hljs-keyword">true</span>;
+		
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-number">100000</span>; i++) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j &lt;= Math.sqrt(i); j++) &#123;
+				<span class="hljs-keyword">if</span> (i % j == <span class="hljs-number">0</span>) &#123;
+					isPrime = <span class="hljs-keyword">false</span>;
+                    <span class="hljs-keyword">break</span>;
+                &#125;
+            &#125;
+			<span class="hljs-keyword">if</span> (isPrime) &#123;
+                    <span class="hljs-comment">//System.out.println("获取质数：" + i);</span>
+					count++;
+			&#125;
+			isPrime = <span class="hljs-keyword">true</span>;
+        &#125;
+		<span class="hljs-keyword">long</span> end = System.currentTimeMillis();
+		
+		System.out.println(<span class="hljs-string">"质数个数："</span> + count);
+		System.out.println(<span class="hljs-string">"花费时间："</span> + (end - start));
+
+	&#125;
+&#125;</code></pre>
+
+
+
+<h4 id="阶段项目1：家庭收支系统"><a href="#阶段项目1：家庭收支系统" class="headerlink" title="阶段项目1：家庭收支系统"></a>阶段项目1：家庭收支系统</h4><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">	家庭收支系统的项目</span>
+<span class="hljs-comment">	不足：</span>
+<span class="hljs-comment">	1. 除了主界面的服务选项，其他都未做异常处理。</span>
+<span class="hljs-comment">	2. 不能存储数据到硬盘。</span>
+<span class="hljs-comment">	3. 还只是面向过程的编程。</span>
+<span class="hljs-comment">	4. 之后还可以添加增删记录的功能，但是目前只是用字符串存储，学习后面的内容应该可以用更好的方式存储数据。</span>
+<span class="hljs-comment">*/</span>
+
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FamilyAccount</span></span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
+
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+		<span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>; <span class="hljs-comment">//记录收支的次数</span>
+		<span class="hljs-keyword">int</span> sumAccount = <span class="hljs-number">0</span>; <span class="hljs-comment">//总金额</span>
+		<span class="hljs-keyword">int</span> money = <span class="hljs-number">0</span>; <span class="hljs-comment">//用以接收一笔收支的具体金额</span>
+		String explanation = <span class="hljs-string">""</span>; <span class="hljs-comment">//用以接收一笔收支的说明</span>
+		String detail = <span class="hljs-string">""</span>; <span class="hljs-comment">//总的收支明细</span>
+		String isExit = <span class="hljs-string">""</span>; <span class="hljs-comment">//用以接收退出确认判断</span>
+		String option = <span class="hljs-string">""</span>； <span class="hljs-comment">// 用以接收主界面选项</span>
+
+		<span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;
+			System.out.println(<span class="hljs-string">"----------家庭收支系统----------"</span>);
+			System.out.println(<span class="hljs-string">"          1 收支明细"</span>);
+			System.out.println(<span class="hljs-string">"          2 登记收入"</span>);
+			System.out.println(<span class="hljs-string">"          3 登记支出"</span>);
+			System.out.println(<span class="hljs-string">"          4 退   出"</span>);
+			System.out.println(<span class="hljs-string">"--------------------------------"</span>);
+			System.out.print(<span class="hljs-string">"请选择所需要的服务:"</span>);
+
+			option = scan.next();
+			<span class="hljs-keyword">while</span>(!(option.equals(<span class="hljs-string">"1"</span>) || option.equals(<span class="hljs-string">"2"</span>) || option.equals(<span class="hljs-string">"3"</span>) || option.equals(<span class="hljs-string">"4"</span>))) &#123;
+				System.out.print(<span class="hljs-string">"输入不合规，请重新输入:"</span>);
+				option = scan.next();
+			&#125;
+
+			<span class="hljs-keyword">switch</span>(option)&#123;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">"1"</span>:
+					System.out.println(<span class="hljs-string">"---------------收支明细---------------"</span>);
+					System.out.println(<span class="hljs-string">"序号\t当前金额\t收支金额\t说明"</span>);
+					System.out.println(detail);
+					<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">"2"</span>:
+					System.out.println(<span class="hljs-string">"----------登记收入----------"</span>);
+					System.out.print(<span class="hljs-string">"请输入金额:"</span>);
+					money = scan.nextInt();
+					System.out.print(<span class="hljs-string">"请输入说明:"</span>);
+					explanation = scan.next();
+
+					count++;
+					sumAccount += money;
+					detail += (count + <span class="hljs-string">"\t"</span> + sumAccount + <span class="hljs-string">"\t\t+"</span> + money + <span class="hljs-string">"\t\t"</span> + explanation + <span class="hljs-string">"\n"</span>);
+
+					System.out.println(<span class="hljs-string">"----------登记成功----------\n"</span>);
+					<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">"3"</span>:
+					System.out.println(<span class="hljs-string">"----------登记支出----------"</span>);
+					System.out.print(<span class="hljs-string">"请输入金额:"</span>);
+					money = scan.nextInt();
+					System.out.print(<span class="hljs-string">"请输入说明:"</span>);
+					explanation = scan.next();
+
+					count++;
+					sumAccount -= money;
+					detail += (count + <span class="hljs-string">"\t"</span> + sumAccount + <span class="hljs-string">"\t\t-"</span> + money + <span class="hljs-string">"\t\t"</span> + explanation + <span class="hljs-string">"\n"</span>);
+
+					System.out.println(<span class="hljs-string">"----------登记成功----------\n"</span>);
+					<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">"4"</span>:
+					System.out.print(<span class="hljs-string">"请输入y确认退出:"</span>);
+					isExit = scan.next();
+					isExit = isExit.toLowerCase();
+					<span class="hljs-keyword">if</span> (isExit.equals(<span class="hljs-string">"y"</span>)) &#123;
+						<span class="hljs-keyword">return</span>;
+					&#125;
+			&#125;
+
+
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day04-0622"><a href="#Day04-0622" class="headerlink" title="Day04-0622"></a>Day04-0622</h3><h4 id="DailyCode-2"><a href="#DailyCode-2" class="headerlink" title="DailyCode"></a>DailyCode</h4><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 1. 静态初始化</span>
+<span class="hljs-comment"> * 2. 动态初始化</span>
+<span class="hljs-comment"> * 3. 数组长度 arr.length</span>
+<span class="hljs-comment"> * 4. 二分法查找</span>
+<span class="hljs-comment"> * 5. Arrays常用工具类(以整型为例)</span>
+<span class="hljs-comment"> * 		- boolean equals(int[] a, int[] b)</span>
+<span class="hljs-comment"> * 		- String toString(int[] a)</span>
+<span class="hljs-comment"> * 		- void fill(int[] a, int val)</span>
+<span class="hljs-comment"> * 		- void sort(int[] a)</span>
+<span class="hljs-comment"> * 		- int binarySearch(int[] a, int key)</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DailyCode</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		
+		<span class="hljs-comment">// 一维数组的静态初始化</span>
+		<span class="hljs-keyword">int</span>[] arr11 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> &#125;;
+		<span class="hljs-comment">// int[] arr11 = &#123; 0, 1, 2, 3 &#125;;</span>
+		
+		<span class="hljs-comment">// 二维数组的静态初始化</span>
+		<span class="hljs-keyword">int</span>[][] arr12 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[][] &#123; &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span> &#125;, &#123; <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span> &#125;, &#123; <span class="hljs-number">0</span> &#125; &#125;;
+		
+		<span class="hljs-comment">// 一维数组的动态初始化</span>
+		String[] arr21 = <span class="hljs-keyword">new</span> String[<span class="hljs-number">4</span>];
+		arr21[<span class="hljs-number">0</span>] = <span class="hljs-string">"第一个数"</span>;
+		arr21[<span class="hljs-number">1</span>] = <span class="hljs-string">"第二个数"</span>;
+		
+		<span class="hljs-comment">// 二维数组的动态初始化1</span>
+		String[][] arr22 = <span class="hljs-keyword">new</span> String[<span class="hljs-number">3</span>][<span class="hljs-number">2</span>];
+		<span class="hljs-comment">// 二维数组的动态初始化2</span>
+		String[][] arr23 = <span class="hljs-keyword">new</span> String[<span class="hljs-number">3</span>][];
+		
+		<span class="hljs-comment">// 数组长度</span>
+		System.out.println(arr11.length);
+
+		<span class="hljs-comment">// 数组名存储的是地址</span>
+		System.out.println(arr11);
+		System.out.println(arr22);
+		
+		<span class="hljs-comment">// 遍历二维数组</span>
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr12.length; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; arr12[i].length; j++) &#123;
+				System.out.print(arr12[i][j] + <span class="hljs-string">"\t"</span>);
+			&#125;
+			System.out.println();
+		&#125;
+		
+		<span class="hljs-comment">// 二分法查找，要求数组有序</span>
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		<span class="hljs-keyword">int</span>[] binarySearch = &#123;-<span class="hljs-number">11</span>, -<span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">15</span>&#125;;
+		System.out.print(<span class="hljs-string">"输入要查找的数字:"</span>);
+		<span class="hljs-keyword">int</span> value = scan.nextInt();
+		<span class="hljs-keyword">boolean</span> inArray = <span class="hljs-keyword">false</span>;
+		<span class="hljs-keyword">int</span> head = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">int</span> end = binarySearch.length - <span class="hljs-number">1</span>;
+		<span class="hljs-keyword">while</span>(head &lt;= end) &#123;
+			<span class="hljs-keyword">int</span> middle = (head + end) / <span class="hljs-number">2</span>;
+			<span class="hljs-keyword">if</span>(binarySearch[middle] == value) &#123;
+				inArray = <span class="hljs-keyword">true</span>;
+				System.out.println(<span class="hljs-string">"要查找的数字下标为："</span> + middle );
+				<span class="hljs-keyword">break</span>;
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(binarySearch[middle] &gt; value) &#123;
+				end = middle - <span class="hljs-number">1</span>;
+			&#125;<span class="hljs-keyword">else</span> &#123;
+				head = middle + <span class="hljs-number">1</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">if</span>(!inArray) &#123;
+			System.out.println(<span class="hljs-string">"未找到该数字"</span>);
+		&#125;
+		
+		<span class="hljs-comment">// Arrays常用工具类</span>
+		
+		<span class="hljs-comment">// 比较两个数组是否相同</span>
+		String[] arr31 = &#123;<span class="hljs-string">"a"</span>,<span class="hljs-string">"c"</span>,<span class="hljs-string">"b"</span>&#125;;
+		String[] arr32 = &#123;<span class="hljs-string">"a"</span>,<span class="hljs-string">"c"</span>,<span class="hljs-string">"b"</span>&#125;;
+		String[] arr33 = &#123;<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>,<span class="hljs-string">"c"</span>&#125;;
+		System.out.println(Arrays.equals(arr31, arr32));
+		System.out.println(Arrays.equals(arr31, arr33));
+		
+		<span class="hljs-comment">// 将数组转为字符串</span>
+		System.out.println(Arrays.toString(arr33));
+		
+		<span class="hljs-keyword">int</span>[] arr34 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123;<span class="hljs-number">3</span>, -<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, -<span class="hljs-number">3</span>&#125;;
+
+		<span class="hljs-comment">// 排序（快排）</span>
+		Arrays.sort(arr34);
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr34.length; i++) &#123;
+			System.out.print(arr34[i] + <span class="hljs-string">"\t"</span>);	
+		&#125;
+		System.out.println();
+		
+		<span class="hljs-comment">// 二分法查找</span>
+		System.out.println(<span class="hljs-string">"查找的数字下标为："</span> + Arrays.binarySearch(arr34, -<span class="hljs-number">1</span>));
+		
+		<span class="hljs-comment">// 指定填充</span>
+		Arrays.fill(arr34, <span class="hljs-number">9</span>);
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr34.length; i++) &#123;
+			System.out.print(arr34[i] + <span class="hljs-string">"\t"</span>);	
+		&#125;
+		
+	&#125;
+&#125;</code></pre>
+
+<h4 id="YangHuiTriangle"><a href="#YangHuiTriangle" class="headerlink" title="YangHuiTriangle"></a>YangHuiTriangle</h4><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 利用二位数组输出10行杨辉三角形</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YangHuiTriangle</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		
+		<span class="hljs-keyword">int</span>[][] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10</span>][];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			arr[i] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[i+<span class="hljs-number">1</span>];
+			arr[i][<span class="hljs-number">0</span>] = arr[i][i] = <span class="hljs-number">1</span>;
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; arr[i].length-<span class="hljs-number">1</span>; j++) &#123;
+				arr[i][j] = arr[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>] + arr[i-<span class="hljs-number">1</span>][j];
+			&#125;
+		&#125;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i+<span class="hljs-number">1</span>; j++) &#123;
+				System.out.print(arr[i][j]+<span class="hljs-string">"\t"</span>);
+			&#125;
+			System.out.println();
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h4 id="HelixSeq"><a href="#HelixSeq" class="headerlink" title="HelixSeq"></a>HelixSeq</h4><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 输入整型数字，输出回形数，如</span>
+<span class="hljs-comment"> * 输入 4</span>
+<span class="hljs-comment"> * 输出 </span>
+<span class="hljs-comment"> * 1		2		3		4</span>
+<span class="hljs-comment"> * 12		13		14		5</span>
+<span class="hljs-comment"> * 11		16		15		6</span>
+<span class="hljs-comment"> * 10		9		8		7</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * 1. 最大数值是长度的平方</span>
+<span class="hljs-comment"> * 2. 每次都是按照右下左上右...的顺序</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelixSeq</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		System.out.print(<span class="hljs-string">"输入一个整型："</span>);
+		<span class="hljs-keyword">int</span> n = scan.nextInt();
+		<span class="hljs-keyword">int</span> len = n*n; <span class="hljs-comment">// 总长度</span>
+		<span class="hljs-keyword">int</span>[][] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n][n];
+		<span class="hljs-keyword">int</span> k = <span class="hljs-number">1</span>; <span class="hljs-comment">// 控制方向，1234分别对应右下左上</span>
+		<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span>; <span class="hljs-comment">// 相当于坐标 x↓ y→，用于填数</span>
+		
+		<span class="hljs-comment">// i作为填入的数，注意从1开始</span>
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i &lt;= len; i++) &#123;
+			<span class="hljs-keyword">if</span>(k == <span class="hljs-number">1</span>) &#123;
+				<span class="hljs-keyword">if</span>(y &lt; n &amp;&amp; arr[x][y] == <span class="hljs-number">0</span> ) &#123;
+					arr[x][y++] = i; <span class="hljs-comment">// 向右填数，每次填一个y+1</span>
+				&#125;<span class="hljs-keyword">else</span> &#123;
+					k = <span class="hljs-number">2</span>; <span class="hljs-comment">// 填到最右边的数时调整方向向下</span>
+					i--; <span class="hljs-comment">// 本次循环没有填任何数只是调整了方向，所以i-1</span>
+					x++; <span class="hljs-comment">// 下一次填数从下一行开始</span>
+					y--; <span class="hljs-comment">// 上一次填到最右边时也自增了，y-1避免索引越界</span>
+				&#125;
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (k == <span class="hljs-number">2</span>) &#123;
+				<span class="hljs-keyword">if</span>(x &lt; n &amp;&amp; arr[x][y] == <span class="hljs-number">0</span>) &#123;
+					arr[x++][y] = i;
+				&#125;<span class="hljs-keyword">else</span> &#123;
+					k = <span class="hljs-number">3</span>;
+					i--;
+					x--;
+					y--;
+				&#125;
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(k == <span class="hljs-number">3</span>)&#123;
+				<span class="hljs-keyword">if</span>(y &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[x][y] == <span class="hljs-number">0</span>) &#123;
+					arr[x][y--] = i;
+				&#125;<span class="hljs-keyword">else</span> &#123;
+					k = <span class="hljs-number">4</span>;
+					i--;
+					x--;
+					y++;
+				&#125;
+			&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (k == <span class="hljs-number">4</span>) &#123;
+				<span class="hljs-keyword">if</span>(x &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[x][y] == <span class="hljs-number">0</span>) &#123;
+					arr[x--][y] = i;
+				&#125;<span class="hljs-keyword">else</span> &#123;
+					k = <span class="hljs-number">1</span>;
+					i--;
+					x++;
+					y++;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;
+				System.out.print(arr[i][j]+<span class="hljs-string">"\t"</span>);
+			&#125;
+			System.out.println();
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h4 id="BubbleSort"><a href="#BubbleSort" class="headerlink" title="BubbleSort"></a>BubbleSort</h4><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BubbleSort</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">20</span>];
+		
+		<span class="hljs-comment">// 生成20个随机数并填入到数组中</span>
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			arr[i] = (<span class="hljs-keyword">int</span>)(Math.random() * <span class="hljs-number">100</span>) - <span class="hljs-number">50</span>;
+			System.out.print(arr[i] + <span class="hljs-string">"\t"</span>);
+		&#125;
+		System.out.println();
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length - <span class="hljs-number">1</span>; i++) &#123;
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; arr.length - i - <span class="hljs-number">1</span>; j++) &#123;
+				<span class="hljs-keyword">if</span>(arr[j] &gt; arr[j + <span class="hljs-number">1</span>]) &#123;
+					<span class="hljs-keyword">int</span> temp = arr[j];
+					arr[j] = arr[j + <span class="hljs-number">1</span>];
+					arr[j + <span class="hljs-number">1</span>] = temp;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			System.out.print(arr[i] + <span class="hljs-string">"\t"</span>);
+		&#125;
+		
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day05-0623"><a href="#Day05-0623" class="headerlink" title="Day05-0623"></a>Day05-0623</h3><h4 id="DailyCode-3"><a href="#DailyCode-3" class="headerlink" title="DailyCode"></a>DailyCode</h4><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DailyCode05</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		Person p1 = <span class="hljs-keyword">new</span> Person();
+		p1.isMale = <span class="hljs-keyword">true</span>;
+		p1.name = <span class="hljs-string">"lnzh"</span>;
+		p1.eat();
+		p1.sleep();
+		p1.speak(<span class="hljs-string">"Chinese"</span>);
+	&#125;
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>&#123;
+	<span class="hljs-comment">// 属性</span>
+	String name;
+	<span class="hljs-keyword">int</span> age = <span class="hljs-number">1</span>;
+	<span class="hljs-keyword">boolean</span> isMale;
+	
+	<span class="hljs-comment">// 方法</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"Person can eat!"</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"Person can sleep!"</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">(String language)</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"Person can speak "</span> + language);
+	&#125;
+	
+&#125;</code></pre>
+
+<h4 id="StuTest"><a href="#StuTest" class="headerlink" title="StuTest"></a>StuTest</h4><pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@Description</span> 用于测试Student类</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@author</span> lnzh Email:ln_zh@qq.com</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@version</span></span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@date</span> Jun 23, 2020 4:31:44 PM</span>
+<span class="hljs-comment"> *</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StuTest</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-comment">// 声明一个测试者对象</span>
+		StuTest t1 = <span class="hljs-keyword">new</span> StuTest();
+
+		<span class="hljs-comment">// 声明Student类型的数组</span>
+		Student[] stus = <span class="hljs-keyword">new</span> Student[<span class="hljs-number">20</span>];
+
+		t1.randomInit(stus);
+<span class="hljs-comment">//		t1.printInfo(stus);</span>
+		System.out.println(<span class="hljs-string">"***********************"</span>);
+
+		t1.sortByScore(stus);
+		t1.printInfo(stus);
+		System.out.println(<span class="hljs-string">"***********************"</span>);
+	&#125;
+
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 随机初始化，age取值[17, 20], score取值[30, 100]</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 23, 2020 4:22:36 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> stus Student类数组</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">randomInit</span><span class="hljs-params">(Student[] stus)</span> </span>&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; stus.length; i++) &#123;
+			<span class="hljs-comment">// 给数组元素赋值</span>
+			stus[i] = <span class="hljs-keyword">new</span> Student();
+
+			<span class="hljs-comment">// 给Student对象的属性赋值</span>
+			stus[i].id = i + <span class="hljs-number">1</span>;
+			stus[i].age = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">4</span>) + <span class="hljs-number">17</span>;
+			stus[i].score = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">71</span>) + <span class="hljs-number">30</span>;
+		&#125;
+
+		<span class="hljs-comment">// 方法中调用同一个类的方法</span>
+		printInfo(stus);
+	&#125;
+
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 遍历数组</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 23, 2020 4:43:09 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> stus Student类数组</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printInfo</span><span class="hljs-params">(Student[] stus)</span> </span>&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; stus.length; i++) &#123;
+			stus[i].info();
+		&#125;
+	&#125;
+
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 冒泡排序，按成绩从高到低</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 23, 2020 4:30:30 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> stus Student类数组</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sortByScore</span><span class="hljs-params">(Student[] stus)</span> </span>&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; stus.length - <span class="hljs-number">1</span>; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; stus.length - i - <span class="hljs-number">1</span>; j++) &#123;
+				<span class="hljs-keyword">if</span> (stus[j].score &lt; stus[j + <span class="hljs-number">1</span>].score) &#123;
+					Student temp = stus[j + <span class="hljs-number">1</span>];
+					stus[j + <span class="hljs-number">1</span>] = stus[j];
+					stus[j] = temp;
+				&#125;
+			&#125;
+		&#125;
+	&#125;
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
+	<span class="hljs-keyword">int</span> id; <span class="hljs-comment">// 学号</span>
+	<span class="hljs-keyword">int</span> age; <span class="hljs-comment">// 年龄</span>
+	<span class="hljs-keyword">int</span> score; <span class="hljs-comment">// 成绩</span>
+
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">info</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"学号："</span> + id + <span class="hljs-string">"\t年龄："</span> + age + <span class="hljs-string">"\t成绩："</span> + score);
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day06-0624"><a href="#Day06-0624" class="headerlink" title="Day06-0624"></a>Day06-0624</h3><h4 id="DailyCode06"><a href="#DailyCode06" class="headerlink" title="DailyCode06"></a>DailyCode06</h4><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 1. 方法重载</span>
+<span class="hljs-comment"> * 2. 递归</span>
+<span class="hljs-comment"> * 3. 权限修饰符</span>
+<span class="hljs-comment"> * 4. 构造器</span>
+<span class="hljs-comment"> * 5. this</span>
+<span class="hljs-comment"> * 6. UML</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DailyCode06</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-comment">// 递归：斐波那契数列</span>
+<span class="hljs-comment">//		1	</span>
+<span class="hljs-comment">//		1	2	</span>
+<span class="hljs-comment">//		3	5	8	</span>
+<span class="hljs-comment">//		13	21	34	55	</span>
+<span class="hljs-comment">//		89	144	233	377	610</span>
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) &#123;
+				System.out.print(fibonacii(i * (i - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span> + j + <span class="hljs-number">1</span>) + <span class="hljs-string">"\t"</span>);
+			&#125;
+			System.out.println();
+		&#125;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">fibonacii</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+		&#125;
+		<span class="hljs-keyword">if</span> (n == <span class="hljs-number">2</span>) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+		&#125;
+		<span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+		&#125;
+		<span class="hljs-keyword">return</span> fibonacii(n - <span class="hljs-number">1</span>) + fibonacii(n - <span class="hljs-number">2</span>);
+	&#125;
+&#125;</code></pre>
+
+<h4 id="BankTest"><a href="#BankTest" class="headerlink" title="BankTest"></a>BankTest</h4><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BankTest</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-comment">// 创建银行对象，最多有10个客户</span>
+		Bank bank = <span class="hljs-keyword">new</span> Bank(<span class="hljs-number">10</span>);
+		
+		
+		<span class="hljs-comment">// 添加客户 张三，为其添加账户，金额为1000</span>
+		bank.addCustomer(<span class="hljs-string">"张"</span>, <span class="hljs-string">"三"</span>, <span class="hljs-keyword">new</span> Account(<span class="hljs-number">1000</span>));
+		
+		<span class="hljs-comment">// 添加客户 李四</span>
+		bank.addCustomer(<span class="hljs-string">"李"</span>, <span class="hljs-string">"四"</span>);
+		<span class="hljs-comment">// 为索引为1的客户添加账户，金额为1234</span>
+		bank.getCustomer(<span class="hljs-number">1</span>).setAccount(<span class="hljs-keyword">new</span> Account(<span class="hljs-number">1234</span>));
+		
+		<span class="hljs-comment">// 添加客户 王五</span>
+		bank.addCustomer(<span class="hljs-string">"王"</span>, <span class="hljs-string">"五"</span>);
+		
+		<span class="hljs-comment">// 输出索引为0的客户的账户的金额</span>
+		System.out.println(bank.getCustomer(<span class="hljs-number">0</span>).getAccount().getBalance());
+		
+		<span class="hljs-comment">// 向索引为0的客户的账户存入999</span>
+		bank.getCustomer(<span class="hljs-number">0</span>).getAccount().deposit(<span class="hljs-number">999</span>);
+
+		<span class="hljs-comment">// 从索引为0的客户的账户取出888</span>
+		bank.getCustomer(<span class="hljs-number">0</span>).getAccount().withdraw(<span class="hljs-number">888</span>);
+		System.out.println(bank.getCustomer(<span class="hljs-number">0</span>).getAccount().getBalance());
+		
+		<span class="hljs-comment">// 从索引为0的客户的账户取出1888</span>
+		bank.getCustomer(<span class="hljs-number">0</span>).getAccount().withdraw(<span class="hljs-number">1888</span>);
+		System.out.println(bank.getCustomer(<span class="hljs-number">0</span>).getAccount().getBalance());
+		
+		<span class="hljs-comment">// 输出银行bank对象的客户数量</span>
+		System.out.println(bank.getNumOfCustomer());
+		
+		bank.printInfo();
+	&#125;
+&#125;</code></pre>
+
+<h5 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h5><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * Account</span>
+<span class="hljs-comment"> * - balance : double</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + Account(init_balance : double)</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + getBalance() : double</span>
+<span class="hljs-comment"> * + deposit(amt : double)			//存款</span>
+<span class="hljs-comment"> * + withdraw(amt : double)			//提款</span>
+<span class="hljs-comment"> */</span>
+
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@Description</span> 账户类</span>
+<span class="hljs-comment"> *  - 属性：balance //金额</span>
+<span class="hljs-comment"> * 	- 方法：</span>
+<span class="hljs-comment"> * 		getBalance()	//获取金额</span>
+<span class="hljs-comment"> * 		deposit()		//存款</span>
+<span class="hljs-comment"> * 		withdraw()		//提款</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@author</span> lnzh	 Email:ln_zh@qq.com</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@version</span></span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:39:51 PM</span>
+<span class="hljs-comment"> *</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>&#123;
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> balance;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">()</span> </span>&#123;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(<span class="hljs-keyword">double</span> balance)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.balance = balance;
+	&#125;
+	
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 获取账户Account对象的金额</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:21:55 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@return</span></span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getBalance</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.balance;
+	&#125;
+
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 向账户内存款</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:23:02 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> amt 存入的金额</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deposit</span><span class="hljs-params">(<span class="hljs-keyword">double</span> amt)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (amt &lt;= <span class="hljs-number">0</span>) &#123;
+			System.out.println(<span class="hljs-string">"存款失败！"</span>);
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		balance += amt;
+		System.out.println(<span class="hljs-string">"成功存入："</span> + amt + <span class="hljs-string">",当前金额为："</span> + balance);
+	&#125;
+	
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 从账户内取款</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:24:36 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> amt 取出的金额</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">withdraw</span><span class="hljs-params">(<span class="hljs-keyword">double</span> amt)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(amt&gt;balance || amt&lt;=<span class="hljs-number">0</span>) &#123;
+			System.out.println(<span class="hljs-string">"取款失败！"</span>);
+			<span class="hljs-keyword">return</span>;
+		&#125;
+		balance -= amt;
+		System.out.println(<span class="hljs-string">"成功取出："</span> + amt + <span class="hljs-string">",当前金额为："</span> + balance);
+	&#125;
+&#125;</code></pre>
+
+<h5 id="Customer"><a href="#Customer" class="headerlink" title="Customer"></a>Customer</h5><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * Customer</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * - firstName : String</span>
+<span class="hljs-comment"> * - lastName : String</span>
+<span class="hljs-comment"> * - account : Account</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + Customer(f:String, l:String)</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + getFirstName() : String</span>
+<span class="hljs-comment"> * + getLastName() : String</span>
+<span class="hljs-comment"> * + getAccount() : Account</span>
+<span class="hljs-comment"> * + setAccount(acct : Account) </span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>&#123;
+	<span class="hljs-keyword">private</span> String firstName;
+	<span class="hljs-keyword">private</span> String lastName;
+	<span class="hljs-keyword">private</span> Account account;
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">()</span> </span>&#123;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">(String f, String l)</span> </span>&#123;
+		firstName = f;
+		lastName = l;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">(String f, String l, Account acct)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>(f,l);
+		<span class="hljs-keyword">this</span>.account = acct;
+	&#125;
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFirstName</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> firstName;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getLastName</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> lastName;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> Account <span class="hljs-title">getAccount</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> account;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAccount</span><span class="hljs-params">(Account acct)</span> </span>&#123;
+		account = acct;
+	&#125;
+&#125;</code></pre>
+
+<h5 id="Bank"><a href="#Bank" class="headerlink" title="Bank"></a>Bank</h5><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * Bank</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * - customers : Customer[]</span>
+<span class="hljs-comment"> * - numberOfCustomer : int</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + Bank()</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> * + addCustomer(f:String, l:String)</span>
+<span class="hljs-comment"> * + getNumOfCustomer() : int</span>
+<span class="hljs-comment"> * + getCustomer(index:int) : Customer</span>
+<span class="hljs-comment"> * </span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bank</span> </span>&#123;
+	<span class="hljs-keyword">private</span> Customer[] customers;
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> numberOfCustomer;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bank</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;
+		customers = <span class="hljs-keyword">new</span> Customer[num];
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addCustomer</span><span class="hljs-params">(String f, String l)</span> </span>&#123;
+		customers[numberOfCustomer++] = <span class="hljs-keyword">new</span> Customer(f, l);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addCustomer</span><span class="hljs-params">(String f, String l, Account acct)</span> </span>&#123;
+		customers[numberOfCustomer++] = <span class="hljs-keyword">new</span> Customer(f, l, acct);
+	&#125;
+	
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 获取客户数量</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:35:50 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@return</span> 客户数量</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumOfCustomer</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> numberOfCustomer;
+	&#125;
+	
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 获取指定索引的客户对象</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:37:07 PM</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> index</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@return</span> Customer Object</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> Customer <span class="hljs-title">getCustomer</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> customers[index];
+	&#125;
+	
+	<span class="hljs-comment">/**</span>
+<span class="hljs-comment">	 * </span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span> 打印所有客户的姓名和账户金额</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> lnzh</span>
+<span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> Jun 24, 2020 2:38:17 PM</span>
+<span class="hljs-comment">	 *</span>
+<span class="hljs-comment">	 */</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printInfo</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numberOfCustomer; i++) &#123;
+			<span class="hljs-keyword">if</span> (customers[i] != <span class="hljs-keyword">null</span>) &#123;
+				System.out.println(i + <span class="hljs-string">"\t客户："</span> + customers[i].getFirstName() + customers[i].getLastName() + <span class="hljs-string">"\t当前账户金额为："</span>
+						+ ((customers[i].getAccount() == <span class="hljs-keyword">null</span>) ? <span class="hljs-number">0.0</span> : customers[i].getAccount().getBalance()));
+			&#125;
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day06-项目二：客户管理系统"><a href="#Day06-项目二：客户管理系统" class="headerlink" title="Day06-项目二：客户管理系统"></a>Day06-项目二：客户管理系统</h3><p>结构：</p>
+<ul>
+<li>day06_prj02<ul>
+<li>src<ul>
+<li>com.lnzh.bean<ul>
+<li>Customer.java</li>
+</ul>
+</li>
+<li>com.lnzh.service<ul>
+<li>CustomerList.java</li>
+</ul>
+</li>
+<li>com.lnzh.util<ul>
+<li>CustomerUtility.java</li>
+</ul>
+</li>
+<li>com.lnzh.view<ul>
+<li>CustomerView.java</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Customer-1"><a href="#Customer-1" class="headerlink" title="Customer"></a>Customer</h4><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.lnzh.bean;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>&#123;
+	
+	<span class="hljs-keyword">private</span> String name;
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">char</span> gender;
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+	<span class="hljs-keyword">private</span> String phone;
+	<span class="hljs-keyword">private</span> String email;
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">()</span> </span>&#123;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">(String name, <span class="hljs-keyword">char</span> gender, <span class="hljs-keyword">int</span> age, String phone, String email)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.name = name;
+		<span class="hljs-keyword">this</span>.gender = gender;
+		<span class="hljs-keyword">this</span>.age = age;
+		<span class="hljs-keyword">this</span>.phone = phone;
+		<span class="hljs-keyword">this</span>.email = email;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> name;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.name = name;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getGender</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> gender;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGender</span><span class="hljs-params">(<span class="hljs-keyword">char</span> gender)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.gender = gender;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getAge</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> age;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.age = age;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPhone</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> phone;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPhone</span><span class="hljs-params">(String phone)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.phone = phone;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getEmail</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> email;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setEmail</span><span class="hljs-params">(String email)</span> </span>&#123;
+		<span class="hljs-keyword">this</span>.email = email;
+	&#125;
+&#125;</code></pre>
+
+<h4 id="CustomerList"><a href="#CustomerList" class="headerlink" title="CustomerList"></a>CustomerList</h4><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.lnzh.service;
+
+<span class="hljs-keyword">import</span> com.lnzh.bean.Customer;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomerList</span> </span>&#123;
+	
+	<span class="hljs-keyword">private</span> Customer[] customers;<span class="hljs-comment">// 用来保存客户对象的数组</span>
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> total;<span class="hljs-comment">// 记录已保存客户对象的数量</span>
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">CustomerList</span><span class="hljs-params">(<span class="hljs-keyword">int</span> totalCustomer)</span> </span>&#123;
+		customers = <span class="hljs-keyword">new</span> Customer[totalCustomer];
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">addCustomer</span><span class="hljs-params">(Customer customer)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (total == customers.length) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+		&#125;
+		customers[total++] = customer;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">deleteCustomer</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span> || index &gt;= total) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+		&#125;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = index; i &lt; total; i++) &#123;
+			customers[i] = customers[i + <span class="hljs-number">1</span>];
+		&#125;
+		customers[--total] = <span class="hljs-keyword">null</span>;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">replaceCustomer</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index, Customer customer)</span> </span>&#123;
+		
+		<span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span> || index &gt;= total) &#123;
+			System.out.println(<span class="hljs-string">"替换失败"</span>);
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+		&#125;
+		customers[index] = customer;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> Customer <span class="hljs-title">getCustomer</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span> || index &gt;= customers.length) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+		&#125;
+		<span class="hljs-keyword">return</span> customers[index];
+	&#125;
+
+	<span class="hljs-keyword">public</span> Customer[] getAllCustomers() &#123;
+		Customer[] custs = <span class="hljs-keyword">new</span> Customer[total];
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; total; i++) &#123;
+			custs[i] = customers[i];
+		&#125;
+		<span class="hljs-keyword">return</span> custs;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getTotal</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> total;
+	&#125;
+
+&#125;</code></pre>
+
+<h4 id="CustomerUtility"><a href="#CustomerUtility" class="headerlink" title="CustomerUtility"></a>CustomerUtility</h4><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.lnzh.util;
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomerUtility</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">readServiceKey</span><span class="hljs-params">()</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		String key;
+		System.out.print(<span class="hljs-string">"请输入所需的服务项："</span>);
+		key = scan.next();
+		<span class="hljs-keyword">while</span> (!(key.equals(<span class="hljs-string">"1"</span>) || key.equals(<span class="hljs-string">"2"</span>) || key.equals(<span class="hljs-string">"3"</span>) || key.equals(<span class="hljs-string">"4"</span>) || key.equals(<span class="hljs-string">"5"</span>))) &#123;
+			System.out.print(<span class="hljs-string">"输入不合法，请重新输入："</span>);
+			key = scan.next();
+		&#125;
+		<span class="hljs-keyword">return</span> key;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">readExitConfirm</span><span class="hljs-params">()</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		String key;
+		System.out.print(<span class="hljs-string">"输入Y/y确认退出："</span>);
+		key = scan.next();
+		<span class="hljs-keyword">if</span> (key.equals(<span class="hljs-string">"y"</span>) || key.equals(<span class="hljs-string">"Y"</span>)) &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+		&#125;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+	&#125;
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">readIndex</span><span class="hljs-params">(<span class="hljs-keyword">int</span> total)</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		<span class="hljs-keyword">int</span> key;
+		System.out.print(<span class="hljs-string">"请输入序号："</span>);
+		key = scan.nextInt();
+		<span class="hljs-keyword">while</span> (key &lt; <span class="hljs-number">1</span>||key &gt; total) &#123;
+			System.out.print(<span class="hljs-string">"输入不合法，请重新输入："</span>);
+			key = scan.nextInt();
+		&#125;
+		<span class="hljs-keyword">return</span> key - <span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">readString</span><span class="hljs-params">()</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		<span class="hljs-keyword">return</span> scan.next();
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> <span class="hljs-title">readChar</span><span class="hljs-params">()</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		<span class="hljs-keyword">return</span>  scan.next().charAt(<span class="hljs-number">0</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">readInt</span><span class="hljs-params">()</span> </span>&#123;
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		<span class="hljs-keyword">return</span> scan.nextInt();
+	&#125;
+&#125;</code></pre>
+
+<h4 id="CustomerView"><a href="#CustomerView" class="headerlink" title="CustomerView"></a>CustomerView</h4><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.lnzh.view;
+
+<span class="hljs-keyword">import</span> com.lnzh.bean.Customer;
+<span class="hljs-keyword">import</span> com.lnzh.service.CustomerList;
+<span class="hljs-keyword">import</span> com.lnzh.util.CustomerUtility;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomerView</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		CustomerView viewer = <span class="hljs-keyword">new</span> CustomerView();
+		viewer.enterMainMenu();
+	&#125;
+
+	<span class="hljs-keyword">private</span> CustomerList list = <span class="hljs-keyword">new</span> CustomerList(<span class="hljs-number">10</span>);
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enterMainMenu</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+		<span class="hljs-keyword">while</span> (!isExit) &#123;
+			System.out.println(<span class="hljs-string">"--------------------------客户管理系统------------------------\n"</span>);
+			System.out.println(<span class="hljs-string">"\t\t\t1. 添加用户信息"</span>);
+			System.out.println(<span class="hljs-string">"\t\t\t2. 修改用户信息"</span>);
+			System.out.println(<span class="hljs-string">"\t\t\t3. 删除用户信息"</span>);
+			System.out.println(<span class="hljs-string">"\t\t\t4. 查看用户信息"</span>);
+			System.out.println(<span class="hljs-string">"\t\t\t5. 退  出"</span>);
+			System.out.println(<span class="hljs-string">"\n------------------------------------------------------------\n"</span>);
+			String key = CustomerUtility.readServiceKey();
+			<span class="hljs-keyword">switch</span> (key) &#123;
+			<span class="hljs-keyword">case</span> <span class="hljs-string">"1"</span>:
+				addNewCustomer();
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-string">"2"</span>:
+				modifyCustomer();
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-string">"3"</span>:
+				deleteCustomer();
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-string">"4"</span>:
+				listAllCustomers();
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-string">"5"</span>:
+				isExit = CustomerUtility.readExitConfirm();
+				<span class="hljs-keyword">break</span>;
+			&#125;
+		&#125;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNewCustomer</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"************************* 添加客户 **************************"</span>);
+		Customer cust = <span class="hljs-keyword">new</span> Customer();
+		System.out.print(<span class="hljs-string">"姓名："</span>);
+		cust.setName(CustomerUtility.readString());
+		System.out.print(<span class="hljs-string">"性别："</span>);
+		cust.setGender(CustomerUtility.readChar());
+		System.out.print(<span class="hljs-string">"年龄："</span>);
+		cust.setAge(CustomerUtility.readInt());
+		System.out.print(<span class="hljs-string">"电话："</span>);
+		cust.setPhone(CustomerUtility.readString());
+		System.out.print(<span class="hljs-string">"邮箱："</span>);
+		cust.setEmail(CustomerUtility.readString());
+
+		list.addCustomer(cust);
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">modifyCustomer</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"*********************** 修改客户信息 ************************"</span>);
+
+		<span class="hljs-keyword">int</span> index = CustomerUtility.readIndex(list.getTotal());
+		Customer cust = list.getCustomer(index);
+
+		System.out.print(<span class="hljs-string">"姓名("</span> + cust.getName() + <span class="hljs-string">",输入n不修改)："</span>);
+		String name = CustomerUtility.readString();
+		name = (name.equals(<span class="hljs-string">"n"</span>)) ? cust.getName() : name;
+
+		System.out.print(<span class="hljs-string">"性别("</span> + cust.getGender() + <span class="hljs-string">",输入n不修改)："</span>);
+		<span class="hljs-keyword">char</span> gender = CustomerUtility.readChar();
+		gender = (gender == <span class="hljs-string">'n'</span>) ? cust.getGender() : gender;
+
+		System.out.print(<span class="hljs-string">"年龄("</span> + cust.getAge() + <span class="hljs-string">",输入0不修改)："</span>);
+		<span class="hljs-keyword">int</span> age = CustomerUtility.readInt();
+		age = (age == <span class="hljs-number">0</span>) ? cust.getAge() : age;
+
+		System.out.print(<span class="hljs-string">"电话("</span> + cust.getPhone() + <span class="hljs-string">",输入n不修改)："</span>);
+		String phone = CustomerUtility.readString();
+		phone = (phone.equals(<span class="hljs-string">"n"</span>)) ? cust.getPhone() : phone;
+
+		System.out.print(<span class="hljs-string">"邮箱("</span> + cust.getEmail() + <span class="hljs-string">",输入n不修改)："</span>);
+		String email = CustomerUtility.readString();
+		email = (email.equals(<span class="hljs-string">"n"</span>)) ? cust.getEmail() : email;
+
+		Customer custNew = <span class="hljs-keyword">new</span> Customer(name, gender, age, phone, email);
+		
+		list.replaceCustomer(index, custNew);
+
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteCustomer</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+		<span class="hljs-keyword">boolean</span> flag = list.deleteCustomer(CustomerUtility.readIndex(list.getTotal()));
+		<span class="hljs-keyword">if</span> (flag) &#123;
+			System.out.println(<span class="hljs-string">"删除成功！"</span>);
+		&#125; <span class="hljs-keyword">else</span> &#123;
+			System.out.println(<span class="hljs-string">"删除失败！"</span>);
+		&#125;
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listAllCustomers</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+		System.out.println(<span class="hljs-string">"序号\t姓名\t性别\t年龄\t手机号\t\t邮箱"</span>);
+		Customer[] custs = list.getAllCustomers();
+		<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">if</span> (custs.length == <span class="hljs-number">0</span>) &#123;
+			i = custs.length;
+			System.out.println(<span class="hljs-string">"当前没有用户数据！"</span>);
+		&#125;
+		<span class="hljs-keyword">for</span> (; i &lt; custs.length; i++) &#123;
+			System.out.println((i + <span class="hljs-number">1</span>) + <span class="hljs-string">"\t"</span> + custs[i].getName() + <span class="hljs-string">"\t"</span> + custs[i].getGender() + <span class="hljs-string">"\t"</span>
+					+ custs[i].getAge() + <span class="hljs-string">"\t"</span> + custs[i].getPhone() + <span class="hljs-string">"\t"</span> + custs[i].getEmail());
+		&#125;
+		System.out.println(<span class="hljs-string">"************************************************************"</span>);
+	&#125;
+&#125;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="DailyReview"><a href="#DailyReview" class="headerlink" title="DailyReview"></a>DailyReview</h2><h3 id="Day03-0621-1"><a href="#Day03-0621-1" class="headerlink" title="Day03-0621"></a>Day03-0621</h3><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">	根据输入指定季节，输出包含的月份</span>
+<span class="hljs-comment">		Scanner if-else str.equals()</span>
+<span class="hljs-comment">	根据随机生成的月份，输出指定季节</span>
+<span class="hljs-comment">		Math.random() switch-case</span>
+<span class="hljs-comment">*/</span>
+
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span></span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span></span>&#123;
+
+		Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);
+		System.out.print(<span class="hljs-string">"输入一个季节(春/夏/秋/冬):"</span>);
+		String season = scan.next();
+		<span class="hljs-keyword">if</span> (season.equals(<span class="hljs-string">"春"</span>)) &#123;
+			System.out.println(<span class="hljs-string">"3、4、5月为春季"</span>);
+		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (season.equals(<span class="hljs-string">"夏"</span>)) &#123;
+			System.out.println(<span class="hljs-string">"6、7、8月为夏季"</span>);
+		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (season.equals(<span class="hljs-string">"秋"</span>)) &#123;
+			System.out.println(<span class="hljs-string">"9、10、11月为秋季"</span>);
+		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (season.equals(<span class="hljs-string">"冬"</span>)) &#123;
+			System.out.println(<span class="hljs-string">"12、1、2月为冬季"</span>);
+		&#125;<span class="hljs-keyword">else</span>&#123;
+			System.out.println(<span class="hljs-string">"输入不合规范！"</span>);
+		&#125;
+
+		<span class="hljs-keyword">int</span> month = (<span class="hljs-keyword">int</span>)(Math.random() * <span class="hljs-number">12</span>) + <span class="hljs-number">1</span>;
+		System.out.println(<span class="hljs-string">"get month = "</span> + month);
+		<span class="hljs-keyword">switch</span>(month)&#123;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+				System.out.println(month + <span class="hljs-string">"月是春季"</span>);
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:
+				System.out.println(month + <span class="hljs-string">"月是夏季"</span>);
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">11</span>:
+				System.out.println(month + <span class="hljs-string">"月是秋季"</span>);
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">12</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+			<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+				System.out.println(month + <span class="hljs-string">"月是冬季"</span>);
+				<span class="hljs-keyword">break</span>;
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day04-0622-1"><a href="#Day04-0622-1" class="headerlink" title="Day04-0622"></a>Day04-0622</h3><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 改用while循环完成水仙花数和质数</span>
+<span class="hljs-comment"> */</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-comment">// 三位数水仙花数</span>
+		<span class="hljs-keyword">int</span> i = <span class="hljs-number">100</span>, bai, shi, ge;
+		<span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">1000</span>) &#123;
+			bai = i / <span class="hljs-number">100</span>;
+			shi = (i - <span class="hljs-number">100</span>*bai) / <span class="hljs-number">10</span>;
+			ge = i - <span class="hljs-number">100</span>*bai - <span class="hljs-number">10</span>*shi;
+			<span class="hljs-keyword">if</span>(i == (<span class="hljs-keyword">int</span>)(Math.pow(bai, <span class="hljs-number">3</span>)+Math.pow(shi, <span class="hljs-number">3</span>)+Math.pow(ge, <span class="hljs-number">3</span>))) &#123;
+				System.out.println(i);
+			&#125;
+			i++;
+		&#125;
+		
+		<span class="hljs-comment">// 质数</span>
+		i = <span class="hljs-number">2</span>;
+		<span class="hljs-keyword">int</span> j, count = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">boolean</span> isPrime = <span class="hljs-keyword">true</span>;
+		
+		<span class="hljs-keyword">long</span> start = System.currentTimeMillis();
+		<span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">100000</span>) &#123;
+			j = <span class="hljs-number">2</span>;
+			<span class="hljs-keyword">while</span>(j &lt;= Math.sqrt(i)) &#123;
+				<span class="hljs-keyword">if</span> (i % j == <span class="hljs-number">0</span>) &#123;
+					isPrime = <span class="hljs-keyword">false</span>;
+					<span class="hljs-keyword">break</span>;
+				&#125;
+				j++;
+			&#125;
+			<span class="hljs-keyword">if</span> (isPrime) &#123;
+<span class="hljs-comment">//				System.out.println("得到质数：" + i);</span>
+				count++;
+			&#125;
+			isPrime = <span class="hljs-keyword">true</span>;
+			i++;
+		&#125;
+		<span class="hljs-keyword">long</span> end = System.currentTimeMillis();
+		System.out.println(<span class="hljs-string">"获取质数个数："</span> + count);
+		System.out.println(end - start);
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day05-0623-1"><a href="#Day05-0623-1" class="headerlink" title="Day05-0623"></a>Day05-0623</h3><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 1. 数组初始化和常用Arrays工具类</span>
+<span class="hljs-comment"> * 2. 数组翻转</span>
+<span class="hljs-comment"> * 3. 二分查找</span>
+<span class="hljs-comment"> * 4. 冒泡排序</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review05</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		<span class="hljs-keyword">int</span>[] arr11 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">5</span>, -<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, -<span class="hljs-number">7</span> &#125;;
+		<span class="hljs-keyword">int</span>[] arr111 = &#123; <span class="hljs-number">5</span>, -<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, -<span class="hljs-number">7</span> &#125;;
+		<span class="hljs-keyword">boolean</span> isEqual = Arrays.equals(arr11, arr111);
+		System.out.println(isEqual);
+
+		<span class="hljs-comment">// 数组翻转</span>
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr11.length / <span class="hljs-number">2</span>; i++) &#123;
+			<span class="hljs-keyword">int</span> temp = arr11[i];
+			arr11[i] = arr11[arr11.length - i - <span class="hljs-number">1</span>];
+			arr11[arr11.length - i - <span class="hljs-number">1</span>] = temp;
+		&#125;
+		System.out.println(Arrays.toString(arr11));
+
+		<span class="hljs-keyword">int</span>[] arr12 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">6</span>];
+		Arrays.fill(arr12, <span class="hljs-number">2</span>);
+		System.out.println(Arrays.toString(arr12));
+
+		Arrays.sort(arr11);
+		System.out.println(Arrays.toString(arr11));
+
+		System.out.println(Arrays.binarySearch(arr11, -<span class="hljs-number">2</span>));
+
+		<span class="hljs-keyword">int</span>[][] arr13 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[][] &#123; &#123; -<span class="hljs-number">1</span>, <span class="hljs-number">2</span> &#125;, &#123; <span class="hljs-number">2</span>, -<span class="hljs-number">1</span> &#125;, &#123; <span class="hljs-number">0</span>, <span class="hljs-number">10</span> &#125; &#125;;
+		System.out.println(Arrays.toString(arr13));
+
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr13.length; i++) &#123;
+			System.out.print(Arrays.toString(arr13[i]) + <span class="hljs-string">"\t"</span>);
+		&#125;
+		System.out.println();
+
+		<span class="hljs-keyword">int</span>[][] arr14 = &#123; &#123; -<span class="hljs-number">1</span>, <span class="hljs-number">2</span> &#125;, &#123; <span class="hljs-number">2</span>, -<span class="hljs-number">1</span> &#125;, &#123; <span class="hljs-number">0</span>, <span class="hljs-number">10</span> &#125; &#125;;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr14.length; i++) &#123;
+			System.out.print(Arrays.toString(arr14[i]) + <span class="hljs-string">"\t"</span>);
+		&#125;
+		System.out.println();
+
+		System.out.println(Arrays.equals(arr13, arr14));
+
+		<span class="hljs-keyword">int</span>[][] arr15 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>][];
+		<span class="hljs-keyword">int</span>[][] arr16 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>][<span class="hljs-number">2</span>];
+		arr15[<span class="hljs-number">1</span>] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">11</span>, <span class="hljs-number">22</span> &#125;;
+		arr16[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">11</span>;
+		arr16[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] = <span class="hljs-number">12</span>;
+		System.out.println(Arrays.equals(arr15, arr16));
+
+		<span class="hljs-comment">// 二分查找 arr11 = &#123;-7, -2, -1, 0, 4, 5&#125;</span>
+		<span class="hljs-keyword">int</span> value = <span class="hljs-number">4</span>;
+		<span class="hljs-keyword">int</span> head = <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">int</span> end = arr11.length - <span class="hljs-number">1</span>;
+		<span class="hljs-keyword">boolean</span> inSeq = <span class="hljs-keyword">false</span>;
+		<span class="hljs-keyword">while</span> (head &lt;= end) &#123;
+			<span class="hljs-keyword">int</span> middle = (head + end) / <span class="hljs-number">2</span>;
+			<span class="hljs-keyword">if</span> (arr11[middle] == value) &#123;
+				System.out.println(<span class="hljs-string">"下标为："</span> + middle);
+				inSeq = <span class="hljs-keyword">true</span>;
+				<span class="hljs-keyword">break</span>;
+			&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr11[middle] &lt; value) &#123;
+				head = middle + <span class="hljs-number">1</span>;
+			&#125; <span class="hljs-keyword">else</span> &#123;
+				end = middle - <span class="hljs-number">1</span>;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">if</span> (!inSeq) &#123;
+			System.out.println(<span class="hljs-string">"未找到"</span>);
+		&#125;
+
+		<span class="hljs-comment">// 冒泡排序</span>
+		<span class="hljs-keyword">double</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[<span class="hljs-number">20</span>];
+		System.out.println(<span class="hljs-string">"冒泡原序列："</span>);
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			arr[i] = Math.random() * <span class="hljs-number">10.0</span> - <span class="hljs-number">5.0</span>;
+			System.out.print(arr[i] + <span class="hljs-string">"\t"</span>);
+		&#125;
+		System.out.println();
+
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length - <span class="hljs-number">1</span>; i++) &#123;
+			<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; arr.length - i - <span class="hljs-number">1</span>; j++) &#123;
+				<span class="hljs-keyword">if</span> (arr[j] &gt; arr[j + <span class="hljs-number">1</span>]) &#123;
+					<span class="hljs-keyword">double</span> temp = arr[j];
+					arr[j + <span class="hljs-number">1</span>] = arr[j];
+					arr[j] = temp;
+				&#125;
+			&#125;
+		&#125;
+		System.out.println(<span class="hljs-string">"排序后："</span>);
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+			System.out.print(arr[i] + <span class="hljs-string">"\t"</span>);
+		&#125;
+		System.out.println();
+	&#125;
+&#125;</code></pre>
+
+<h3 id="Day06-0624-1"><a href="#Day06-0624-1" class="headerlink" title="Day06-0624"></a>Day06-0624</h3><pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 1. 设计Cylinder类</span>
+<span class="hljs-comment"> * 2. 属性有底边半径radius和高height</span>
+<span class="hljs-comment"> * 3. 方法有</span>
+<span class="hljs-comment"> * 		- 打印底边半径、高、底面积、体积</span>
+<span class="hljs-comment"> * 		- 获取底面积</span>
+<span class="hljs-comment"> * 		- 获取体积</span>
+<span class="hljs-comment"> * 		- 设置底边半径和高</span>
+<span class="hljs-comment"> * 4. 在main方法中测试</span>
+<span class="hljs-comment"> * 5，另外复习了一下switch语句</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review06</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+		Cylinder c1 = <span class="hljs-keyword">new</span> Cylinder();
+		c1.printInfo();
+		c1.setAttrs(<span class="hljs-number">2.0</span>, <span class="hljs-number">1.0</span>);
+		c1.printInfo();
+		c1.setAttrs(<span class="hljs-number">3.0</span>, -<span class="hljs-number">1</span>);
+		System.out.println(c1.getArea());
+		System.out.println(c1.getVolume());
+
+		show(<span class="hljs-number">0</span>);
+		show(<span class="hljs-number">1</span>);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;
+		<span class="hljs-keyword">switch</span> (i) &#123;
+			<span class="hljs-keyword">default</span>:
+				i += <span class="hljs-number">2</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+				i += <span class="hljs-number">1</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+				i += <span class="hljs-number">8</span>;
+			<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+				i += <span class="hljs-number">4</span>;
+		&#125;
+		System.out.println(<span class="hljs-string">"i="</span> + i);
+	&#125;
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cylinder</span> </span>&#123;
+	<span class="hljs-keyword">double</span> radius;
+	<span class="hljs-keyword">double</span> height;
+
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printInfo</span><span class="hljs-params">()</span> </span>&#123;
+		System.out.println(<span class="hljs-string">"圆柱体的底边半径是"</span> + radius + <span class="hljs-string">"，高是"</span> + height + <span class="hljs-string">"，底面积是"</span> + getArea() + <span class="hljs-string">"体积是"</span> + getVolume());
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getArea</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> Math.PI * radius * radius;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getVolume</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">return</span> Math.PI * radius * radius * height;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">setAttrs</span><span class="hljs-params">(<span class="hljs-keyword">double</span> r, <span class="hljs-keyword">double</span> h)</span> </span>&#123;
+		<span class="hljs-keyword">if</span> (r &lt;= <span class="hljs-number">0.0</span> || h &lt;= <span class="hljs-number">0.0</span>) &#123;
+			System.out.println(<span class="hljs-string">"数值不合理，赋值失败！"</span>);
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+		&#125; <span class="hljs-keyword">else</span> &#123;
+			radius = r;
+			height = h;
+			System.out.println(<span class="hljs-string">"底边半径已更改为："</span> + radius + <span class="hljs-string">"，高已更改为："</span> + height);
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Code/">Code</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/01/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java多线程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/20/learn_java/">
+                        <span class="hidden-mobile">Java学习记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "每天的代码记录&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
