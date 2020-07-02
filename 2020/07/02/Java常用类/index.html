@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <link rel="icon" type="image/png" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Lnzh">
+  <meta name="keywords" content="">
+  <title>Java常用类 - ZH&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ZH | Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-02 21:00">
+      2020年7月2日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h3 id="Java常用类"><a href="#Java常用类" class="headerlink" title="Java常用类"></a>Java常用类</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><ul>
+<li>String是一个final类，不可继承</li>
+<li>字符串的内容在String对象中以一个char型数组value[]保存，该属性由final修饰，不可改变</li>
+<li>双引号引起来的部分是常量，存储在方法区的字符串常量池中，是不可修改的</li>
+<li>常量与常量拼接的结果在常量池，常量池中不会存在相同内容的常量</li>
+<li>字符串拼接时，只要有一个是变量的形式，拼接的结果就是在堆中，若结果调用intern()方法，其返回值在常量池中</li>
+</ul>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">length</span><span class="hljs-params">()</span><span class="hljs-comment">//返回字符串长度</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str)</span><span class="hljs-comment">//返回指定字符串在当前字符串中首次出现的索引，没有返回-1</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> fromIndex)</span><span class="hljs-comment">//返回从指定索引位置开始指定字符串在当前字符串中首次出现的索引</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">lastIndexOf</span><span class="hljs-params">(String str)</span><span class="hljs-comment">//从右往左查找</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">lastIndexOf</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> fromIndex)</span><span class="hljs-comment">//从指定索引往左查找！</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">compareTo</span><span class="hljs-params">(String anotherString)</span><span class="hljs-comment">//比较两个字符串的大小(逐个比较字符的值)</span></span>
+<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">charAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span><span class="hljs-comment">//返回指定索引位置的字符</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">()</span><span class="hljs-comment">//判断字符串是否为空</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">endsWith</span><span class="hljs-params">(String suffix)</span><span class="hljs-comment">//判断是否以指定字符串结尾</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">startsWith</span><span class="hljs-params">(String prefix)</span><span class="hljs-comment">//判断是否以指定字符串开始</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">startsWith</span><span class="hljs-params">(String prefix, <span class="hljs-keyword">int</span> toffset)</span><span class="hljs-comment">//判断从指定索引位置起是否以指定字符串开始</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">contains</span><span class="hljs-params">(CharSequence s)</span><span class="hljs-comment">//判断字符串是否包含指定char值序列</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object obj)</span><span class="hljs-comment">//比较字符串内容是否相同</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">equalsIgnoreCase</span><span class="hljs-params">(String anotherString)</span><span class="hljs-comment">//与equals()类似，忽略大小写</span></span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">matches</span><span class="hljs-params">(String regex)</span><span class="hljs-comment">//判断字符串是否匹配给定正则表达式</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function">String <span class="hljs-title">toLowerCase</span><span class="hljs-params">()</span><span class="hljs-comment">//转换String中的字符为小写</span></span>
+<span class="hljs-function">String <span class="hljs-title">toUperCase</span><span class="hljs-params">()</span><span class="hljs-comment">//转换String中的字符为大写</span></span>
+<span class="hljs-function">String <span class="hljs-title">trim</span><span class="hljs-params">()</span><span class="hljs-comment">//去掉首位空白的字符串副本</span></span>
+<span class="hljs-function">String <span class="hljs-title">concat</span><span class="hljs-params">(String str)</span><span class="hljs-comment">//字符串拼接，作用相当于 +</span></span>
+<span class="hljs-function">String <span class="hljs-title">replace</span><span class="hljs-params">(<span class="hljs-keyword">char</span> oldChar, <span class="hljs-keyword">char</span> newChar)</span><span class="hljs-comment">//将字符串中所有oldChar换为newChar</span></span>
+<span class="hljs-function">String <span class="hljs-title">replace</span><span class="hljs-params">(CharSequence target, CharSequence replacement)</span></span>
+<span class="hljs-function">String <span class="hljs-title">replaceAll</span><span class="hljs-params">(String regex, String replacement)</span><span class="hljs-comment">//用replacement替换所有正则表达式(regex)匹配项</span></span>
+<span class="hljs-function">String <span class="hljs-title">replaceFirst</span><span class="hljs-params">(String regex, String replacement)</span><span class="hljs-comment">//用replacement替换第一个正则表达式(regex)匹配项</span></span>
+<span class="hljs-function">String <span class="hljs-title">substring</span><span class="hljs-params">(<span class="hljs-keyword">int</span> beginIndex)</span><span class="hljs-comment">//截取从beginIndex到最后的字符串</span></span>
+<span class="hljs-function">String <span class="hljs-title">subString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> beginIndex, <span class="hljs-keyword">int</span> endIndex)</span><span class="hljs-comment">//截取从beginIndex到endIndex(不包括)的字符串</span></span>
+<span class="hljs-function">String[] <span class="hljs-title">split</span><span class="hljs-params">(String regex)</span><span class="hljs-comment">//根据指定正则表达式拆分字符串</span></span>
+<span class="hljs-function">String[] <span class="hljs-title">split</span><span class="hljs-params">(String regex, <span class="hljs-keyword">int</span> limit)</span><span class="hljs-comment">//根据指定正则表达式，拆分为最多limit个字符串</span></span></code></pre>
+
+<h5 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h5><ul>
+<li><p>字符串 → 基本数据类型、包装类</p>
+<ul>
+<li>纯数字字符串转换为整型：<code>Integer.parseInt(String str)</code></li>
+<li>其他基本数据类型类似（Byte、Short、Long、Float、Double）</li>
+</ul>
+</li>
+<li><p>基本数据类型、包装类 → 字符串</p>
+<ul>
+<li><code>String.valueOf(int n)</code></li>
+<li>其他类似：valueOf(byte b)、valueOf(long l)、valueOf(float f)、valueOf(double d)、valueOf(boolean b)</li>
+</ul>
+</li>
+<li><p>字符串 → 字符数组</p>
+<ul>
+<li><code>char[] toCharArray()</code></li>
+<li><code>void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)</code>: 将指定索引范围的字符串存放到指定数组中</li>
+</ul>
+</li>
+<li><p>字符数组 → 字符串</p>
+<ul>
+<li>String类构造器：<code>String(char value[])</code>、<code>String(char value[], int offset, int count)</code>等</li>
+</ul>
+</li>
+<li><p>字符串 → 字节数组</p>
+<ul>
+<li><code>byte[] getBytes()</code>: 使用默认字符集将字符串序列编码为byte序列</li>
+<li><code>byte[] getBytes(String charsetName)</code>: 使用指定字符集(utf-8、gbk等)将字符串序列编码为byte序列</li>
+</ul>
+</li>
+<li><p>字节数组 → 字符串</p>
+<ul>
+<li>String类构造器：<code>String(byte bytes[])</code>、<code>String(byte bytes[], int offset, int length)</code>等</li>
+</ul>
+</li>
+</ul>
+<h4 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h4><ul>
+<li>可变的字符序列</li>
+<li>属性 <code>char[] value</code> 没用final声明，可以不断扩容</li>
+<li>属性<code>count</code>记录有效字符个数</li>
+<li>必须用构造器生成<ul>
+<li><code>StringBuffer()</code>: 初始容量为16的字符串缓冲区</li>
+<li><code>StringBuffer(int size)</code>: 指定初始容量</li>
+<li><code>StringBuffer(String str)</code>: 将传入字符串初始化</li>
+</ul>
+</li>
+</ul>
+<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code class="hljs java"><span class="hljs-function">StringBuffer <span class="hljs-title">append</span><span class="hljs-params">(...)</span><span class="hljs-comment">//用于进行字符串拼接，有很多重构的append()方法</span></span>
+<span class="hljs-function">StringBuffer <span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start,<span class="hljs-keyword">int</span> end)</span><span class="hljs-comment">//删除指定索引范围的内容</span></span>
+<span class="hljs-function">StringBuffer <span class="hljs-title">replace</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, String str)</span><span class="hljs-comment">//把[start,end)范围的内容替换为str</span></span>
+<span class="hljs-function">StringBuffer <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> offset, xxx)</span><span class="hljs-comment">//在指定位置插入xxx</span></span>
+<span class="hljs-function">StringBuffer <span class="hljs-title">reverse</span><span class="hljs-params">()</span><span class="hljs-comment">//把当前字符序列逆转</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-comment">//许多方法与String相类似</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">length</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str)</span></span>
+<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">charAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n )</span></span>
+<span class="hljs-function">String <span class="hljs-title">substring</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start,<span class="hljs-keyword">int</span> end)</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCharAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n ,<span class="hljs-keyword">char</span> ch)</span></span></code></pre>
+
+<h4 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h4><ul>
+<li>StringBuilder 和 StringBuffer 非常类似，均代表可变的字符序列，而且提供相关功能的方法也一样</li>
+<li>对比String、StringBuffer、StringBuilder<ul>
+<li>String(JDK1.0)：不可变字符序列</li>
+<li>StringBuffer(JDK1.0)：可变字符序列、效率低、线程安全</li>
+<li>StringBuilder(JDK 5.0)：可变字符序列、效率高、线程不安全</li>
+</ul>
+</li>
+<li>注意：作为参数传递的话，方法内部String不会改变其值，StringBuffer和StringBuilder 会改变其值。</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/01/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="hidden-mobile">Java多线程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Java常用类&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
