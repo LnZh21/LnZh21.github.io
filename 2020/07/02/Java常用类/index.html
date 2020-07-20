@@ -26,7 +26,7 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark.min.css" />
   
 
   
@@ -211,7 +211,7 @@
 <li>常量与常量拼接的结果在常量池，常量池中不会存在相同内容的常量</li>
 <li>字符串拼接时，只要有一个是变量的形式，拼接的结果就是在堆中，若结果调用intern()方法，其返回值在常量池中</li>
 </ul>
-<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">length</span><span class="hljs-params">()</span><span class="hljs-comment">//返回字符串长度</span></span>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">length</span><span class="hljs-params">()</span><span class="hljs-comment">//返回字符串长度</span></span>
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str)</span><span class="hljs-comment">//返回指定字符串在当前字符串中首次出现的索引，没有返回-1</span></span>
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> fromIndex)</span><span class="hljs-comment">//返回从指定索引位置开始指定字符串在当前字符串中首次出现的索引</span></span>
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">lastIndexOf</span><span class="hljs-params">(String str)</span><span class="hljs-comment">//从右往左查找</span></span>
@@ -238,7 +238,7 @@
 <span class="hljs-function">String <span class="hljs-title">substring</span><span class="hljs-params">(<span class="hljs-keyword">int</span> beginIndex)</span><span class="hljs-comment">//截取从beginIndex到最后的字符串</span></span>
 <span class="hljs-function">String <span class="hljs-title">subString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> beginIndex, <span class="hljs-keyword">int</span> endIndex)</span><span class="hljs-comment">//截取从beginIndex到endIndex(不包括)的字符串</span></span>
 <span class="hljs-function">String[] <span class="hljs-title">split</span><span class="hljs-params">(String regex)</span><span class="hljs-comment">//根据指定正则表达式拆分字符串</span></span>
-<span class="hljs-function">String[] <span class="hljs-title">split</span><span class="hljs-params">(String regex, <span class="hljs-keyword">int</span> limit)</span><span class="hljs-comment">//根据指定正则表达式，拆分为最多limit个字符串</span></span></code></pre>
+<span class="hljs-function">String[] <span class="hljs-title">split</span><span class="hljs-params">(String regex, <span class="hljs-keyword">int</span> limit)</span><span class="hljs-comment">//根据指定正则表达式，拆分为最多limit个字符串</span></span></code></pre></div>
 
 <h5 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h5><ul>
 <li><p>字符串 → 基本数据类型、包装类</p>
@@ -287,7 +287,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><pre><code class="hljs java"><span class="hljs-function">StringBuffer <span class="hljs-title">append</span><span class="hljs-params">(...)</span><span class="hljs-comment">//用于进行字符串拼接，有很多重构的append()方法</span></span>
+<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><div class="hljs"><pre><code class="hljs java"><span class="hljs-function">StringBuffer <span class="hljs-title">append</span><span class="hljs-params">(...)</span><span class="hljs-comment">//用于进行字符串拼接，有很多重构的append()方法</span></span>
 <span class="hljs-function">StringBuffer <span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start,<span class="hljs-keyword">int</span> end)</span><span class="hljs-comment">//删除指定索引范围的内容</span></span>
 <span class="hljs-function">StringBuffer <span class="hljs-title">replace</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, String str)</span><span class="hljs-comment">//把[start,end)范围的内容替换为str</span></span>
 <span class="hljs-function">StringBuffer <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> offset, xxx)</span><span class="hljs-comment">//在指定位置插入xxx</span></span>
@@ -298,7 +298,7 @@
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">indexOf</span><span class="hljs-params">(String str)</span></span>
 <span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">charAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n )</span></span>
 <span class="hljs-function">String <span class="hljs-title">substring</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start,<span class="hljs-keyword">int</span> end)</span></span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCharAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n ,<span class="hljs-keyword">char</span> ch)</span></span></code></pre>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCharAt</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n ,<span class="hljs-keyword">char</span> ch)</span></span></code></pre></div>
 
 <h4 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h4><ul>
 <li>StringBuilder 和 StringBuffer 非常类似，均代表可变的字符序列，而且提供相关功能的方法也一样</li>

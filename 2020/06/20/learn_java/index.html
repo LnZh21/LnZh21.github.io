@@ -26,7 +26,7 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark.min.css" />
   
 
   
@@ -206,19 +206,19 @@
             <article class="markdown-body">
               <h2 id="错误集"><a href="#错误集" class="headerlink" title="错误集"></a>错误集</h2><ul>
 <li><p>字符型与字符串声明</p>
-<pre><code class="hljs java"><span class="hljs-comment">// 排序输出</span>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">// 排序输出</span>
 System.out.println(num3 + <span class="hljs-string">'&gt;'</span> + num1 + <span class="hljs-string">'&gt;'</span> + num2); <span class="hljs-comment">// ×</span>
-System.out.println(num3 + <span class="hljs-string">"&gt;"</span> + num1 + <span class="hljs-string">"&gt;"</span> + num2); <span class="hljs-comment">// √</span></code></pre>
+System.out.println(num3 + <span class="hljs-string">"&gt;"</span> + num1 + <span class="hljs-string">"&gt;"</span> + num2); <span class="hljs-comment">// √</span></code></pre></div>
 </li>
 <li><p>概念不清</p>
-<pre><code class="hljs java"><span class="hljs-comment">// 闰年判断条件</span>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">// 闰年判断条件</span>
 year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year/<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year/<span class="hljs-number">4</span> == <span class="hljs-number">0</span> <span class="hljs-comment">// ×</span>
-year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year%<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year%<span class="hljs-number">4</span> == <span class="hljs-number">0</span> <span class="hljs-comment">// √</span></code></pre>
+year%<span class="hljs-number">400</span> == <span class="hljs-number">0</span> || (year%<span class="hljs-number">100</span> != <span class="hljs-number">0</span> &amp;&amp; year%<span class="hljs-number">4</span> == <span class="hljs-number">0</span> <span class="hljs-comment">// √</span></code></pre></div>
 </li>
 <li><p>switch-case语句漏掉 break</p>
 </li>
 <li><p>编译错误：找不到符号</p>
-<pre><code class="hljs java"><span class="hljs-comment">/*</span>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/*</span>
 <span class="hljs-comment">第一行代码中的点号是runoob那copy过来的</span>
 <span class="hljs-comment">第二行代码中的点号是自己打的，输入法检查了是英文半角，但就是会报错，很奇怪的情况，目前没有解决</span>
 <span class="hljs-comment">*/</span>
@@ -233,14 +233,14 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
 <span class="hljs-comment">1 个错误</span>
 <span class="hljs-comment">*/</span>
 <span class="hljs-comment">//解决了，不是点号的问题，单词拼写错了，我现在看自己就像是个傻子。</span>
-<span class="hljs-comment">//一直在关注提示的”符号“，没注意更基本的问题，他这个报错应该改成“找不到方法”更合适吧。</span></code></pre>
+<span class="hljs-comment">//一直在关注提示的”符号“，没注意更基本的问题，他这个报错应该改成“找不到方法”更合适吧。</span></code></pre></div>
 
 
 </li>
 </ul>
 <ul>
 <li><p>数组空指针异常</p>
-<pre><code class="hljs java">Student[] stus = <span class="hljs-keyword">new</span> Student[<span class="hljs-number">20</span>];
+<div class="hljs"><pre><code class="hljs java">Student[] stus = <span class="hljs-keyword">new</span> Student[<span class="hljs-number">20</span>];
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; stus.length; i++) &#123;
 	<span class="hljs-comment">// 给数组元素赋值</span>
 	stus[i] = <span class="hljs-keyword">new</span> Student(); <span class="hljs-comment">// 开始漏了这一步，加强理解在内存中的情况</span>
@@ -248,18 +248,18 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
 	stus[i].id = i + <span class="hljs-number">1</span>;
 	stus[i].age = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">4</span>) + <span class="hljs-number">17</span>;
 	stus[i].score = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">71</span>) + <span class="hljs-number">30</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 
 
 </li>
 </ul>
 <ul>
 <li><p>Syntax error on token “printInfo”, Identifier expected after this token</p>
-<pre><code class="hljs java"><span class="hljs-comment">// 定义了一个Cylinder类，并在此测试</span>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">// 定义了一个Cylinder类，并在此测试</span>
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review06</span> </span>&#123;
 		Cylinder c1 = <span class="hljs-keyword">new</span> Cylinder();
 		c1.printInfo(); <span class="hljs-comment">// 错误原因，应该在方法中调用，我这里忘记写main方法了</span>
-&#125;</code></pre>
+&#125;</code></pre></div>
 
 
 
@@ -359,12 +359,12 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
 <p>CLI(Command Line Interface)：命令行方式</p>
 <p>API(Application Programming Interface)：应用程序编程接口</p>
 <p>常用DOS命令</p>
-<pre><code class="hljs dos"><span class="hljs-built_in">dir</span>：列出当前目录的文件(夹)
+<div class="hljs"><pre><code class="hljs dos"><span class="hljs-built_in">dir</span>：列出当前目录的文件(夹)
 <span class="hljs-built_in">md</span>：创建目录
 <span class="hljs-built_in">rd</span>：删除(空)目录
 <span class="hljs-built_in">del</span>：删除文件/目录
 <span class="hljs-keyword">exit</span>：退出DOS
-<span class="hljs-built_in">echo</span> hello&gt;<span class="hljs-number">1</span>.<span class="hljs-built_in">md</span></code></pre>
+<span class="hljs-built_in">echo</span> hello&gt;<span class="hljs-number">1</span>.<span class="hljs-built_in">md</span></code></pre></div>
 
 <p>机器语言（指令以二进制代码形式存在）-&gt;  汇编语言（用注记符表示机器指令）</p>
 <h3 id="1-2-Java"><a href="#1-2-Java" class="headerlink" title="1.2 Java"></a>1.2 Java</h3><p>Java SE(Java Standard Edition)(桌面级应用)</p>
@@ -407,7 +407,7 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
 </ul>
 <h3 id="1-3-HelloWorld"><a href="#1-3-HelloWorld" class="headerlink" title="1.3 HelloWorld"></a>1.3 HelloWorld</h3><ol>
 <li><p>编写：HelloWorld.java</p>
-<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/**</span>
 <span class="hljs-comment">	<span class="hljs-doctag">@version</span> 1.0</span>
 <span class="hljs-comment">*/</span>
 <span class="hljs-comment">//java源文件中只能有一个类声明为public，且类名与文件名相同</span>
@@ -419,7 +419,7 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
         System.out.print(<span class="hljs-string">"Hello, World!"</span>); <span class="hljs-comment">// 不换行</span>
         System.out.println(<span class="hljs-string">"Hello, World!"</span>);
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 </li>
 <li><p>编译：<code>javac HelloWorld.java</code></p>
 </li>
@@ -453,7 +453,7 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
 <li>变量名、方法名：小驼峰xxYyZz</li>
 <li>常量名：全大写(下划线分隔)XX_YY</li>
 </ul>
-<h3 id="1-6-变量"><a href="#1-6-变量" class="headerlink" title="1.6 变量"></a>1.6 变量</h3><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;
+<h3 id="1-6-变量"><a href="#1-6-变量" class="headerlink" title="1.6 变量"></a>1.6 变量</h3><div class="hljs"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;
 	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
 		System.out.println(<span class="hljs-string">"Hello World!"</span>);
 		<span class="hljs-keyword">byte</span> a1 = <span class="hljs-number">12</span>;
@@ -466,7 +466,7 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
     <span class="hljs-keyword">char</span> c2 = <span class="hljs-number">97</span>;<span class="hljs-comment">//效果同上，不建议使用</span>
 		String s = <span class="hljs-string">"abc"</span>;
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 
 <ul>
 <li><p>变量类型、变量名、存储的值</p>
@@ -1240,8 +1240,8 @@ System.out.println(option.euqals( <span class="hljs-string">"报错"</span> ));
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/06/%E5%86%99%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">
-                        <span class="hidden-mobile">写的乱七八糟</span>
+                      <a href="/2019/11/01/built-self-blog/">
+                        <span class="hidden-mobile">用Hexo+GitHub搭建博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

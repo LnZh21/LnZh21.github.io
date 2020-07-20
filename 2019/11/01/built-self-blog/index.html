@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <link rel="icon" type="image/png" href="https://s1.ax1x.com/2020/06/05/ts5Cin.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Lnzh">
+  <meta name="keywords" content="">
+  <title>用Hexo+GitHub搭建博客 - ZH&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ZH | Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2019-11-01 00:00">
+      2019年11月1日 凌晨
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      912 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="1-github账户"><a href="#1-github账户" class="headerlink" title="1. github账户"></a>1. github账户</h3><ul>
+<li><p>没有的话先去注册一个：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
+</li>
+<li><p>新建一个Repository，格式为: <code>用户名.github.io</code></p>
+<p><img src="/images/Repository.png" srcset="/img/loading.gif" alt="Repository"></p>
+</li>
+</ul>
+<h3 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2. 安装git"></a>2. 安装git</h3><ul>
+<li><p>Ubuntu：  <code>sudo apt install git</code>  </p>
+</li>
+<li><p>Windows</p>
+<ul>
+<li>官网：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></li>
+<li>淘宝镜像：<a href="https://npm.taobao.org/mirrors/git-for-windows/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/git-for-windows/</a></li>
+</ul>
+</li>
+</ul>
+<p>安装后执行以下命令</p>
+<div class="hljs"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">"username"</span>  <span class="hljs-comment"># github用户名，非昵称</span>
+git config --global user.email  <span class="hljs-string">"youremail@example.com"</span>  <span class="hljs-comment"># github注册邮箱</span></code></pre></div>
+
+<p>这两条命令会在主目录下创建 .gitconfig 账户配置文件</p>
+<h3 id="3-创建SSH-Key"><a href="#3-创建SSH-Key" class="headerlink" title="3. 创建SSH Key"></a>3. 创建SSH Key</h3><ul>
+<li>检查本机是否已存在ssh密钥：<code>id_rsa</code>和<code>id_rsa.pub</code><ul>
+<li>Linux路径：<code>~/.ssh</code>，win10路径：<code>%HOMEPATH%/.ssh</code></li>
+</ul>
+</li>
+</ul>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-comment"># 若不存在目录或这两个文件，就执行下面命令创建SSH Key</span>
+ssh-keygen -t rsa -C <span class="hljs-string">"youremail@example.com"</span>
+<span class="hljs-comment"># 邮箱为github注册邮箱</span>
+<span class="hljs-comment"># 一直回车就好了</span>
+<span class="hljs-comment"># win10如果提示不是内部或外部命令需要到git安装路径/usr/bin 中打开cmd执行</span></code></pre></div>
+
+<ul>
+<li><p>github主页 → 头像 → Settings → SSH and GPG keys → New SSH key：</p>
+<ul>
+<li><code>Title</code>可以任意填</li>
+</ul>
+</li>
+<li><p><code>Key</code>为<code>id_rsa.pub</code>文件的内容</p>
+<ul>
+<li>Linux：终端执行<code>cat ~/.ssh/id_rsa.pub</code><ul>
+<li>win10：用文本编辑器打开</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-安装Nodejs"><a href="#4-安装Nodejs" class="headerlink" title="4. 安装Nodejs"></a>4. 安装Nodejs</h3><ul>
+<li><p>Linux：nvm (Node Version Manager)</p>
+<ul>
+<li><p>nvm是 Nodejs 版本管理器，它让我们方便的管理Nodejs 版本。</p>
+</li>
+<li><p>官方文档：<a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">https://github.com/nvm-sh/nvm</a></p>
+</li>
+<li><p>用git安装nvm: </p>
+  <div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 打开终端进入到主目录 <span class="hljs-built_in">cd</span> ~/</span>
+git clone https://github.com/nvm-sh/nvm.git .nvm
+cd ~/.nvm
+git checkout v0.35.3 # 注意当前版本号
+. nvm.sh</code></pre></div>
+
+<p>  在<code>~/.bashrc</code>、<code>~/.profile</code> 或 <code>~/.zshrc</code>中添加</p>
+  <div class="hljs"><pre><code class="hljs shell">export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # 设置npm镜像源</code></pre></div>
+</li>
+<li><p>其他方法查看<a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">官方文档</a>，或者 <a href="https://www.runoob.com/w3cnote/nvm-manager-node-versions.html" target="_blank" rel="noopener">使用 nvm 管理不同版本的 node 与 npm</a></p>
+</li>
+<li><p>常用命令</p>
+<div class="hljs"><pre><code class="hljs shell">  nvm ls-remote  # 查看可安装的node版本
+  nvm install [version] # 安装指定版本node
+nvm uninstall [version] # 卸载指定版本的node
+  nvm use [version] # 设置全局默认node版本
+  nvm list # 查看本地已安装的node版本
+  nvm current # 查看当前使用的node版本</code></pre></div>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Win10：nvs (Node Version Switcher)</p>
+<ul>
+<li><p>官方文档：<a href="https://github.com/jasongin/nvs" target="_blank" rel="noopener">https://github.com/jasongin/nvs</a></p>
+</li>
+<li><p>在 <a href="https://github.com/jasongin/nvs/releases" target="_blank" rel="noopener">nvs/releases</a> 下载最新版本的 <code>nvs.msi</code>，然后双击安装即可。</p>
+</li>
+<li><p>默认安装路径：<code>%HOMEPATH%\AppData\Local\nvs</code></p>
+<div class="hljs"><pre><code class="hljs shell">nvs remote node https://npm.taobao.org/mirrors/node/ # 设置镜像源</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><p>常用命令</p>
+<div class="hljs"><pre><code class="hljs shell">nvs ls-remote # 查看可安装的node版本
+nvs ls # 查看本地已安装的node版本
+nvs add [version] # 下载指定版本node
+nvs rm &lt;version&gt; # 删除指定版本的node
+nvs use [version] # 当前shell使用指定版本的node
+nvs link [version] # 设置全局默认node版本
+nvs unlink [version]</code></pre></div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-安装Hexo"><a href="#5-安装Hexo" class="headerlink" title="5. 安装Hexo"></a>5. 安装Hexo</h3><ul>
+<li><p>官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+</li>
+<li><p>官方文档：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+<div class="hljs"><pre><code class="hljs shell">npm install hexo-cli -g</code></pre></div>
+
+</li>
+</ul>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 在当前目录下创建MyBlog文件夹并初始化</span>
+hexo init MyBlog
+
+cd MyBlog
+hexo g  #  generate
+hexo s  #  server</code></pre></div>
+
+<blockquote>
+<p>也可以创建一个目录，然后在目录内打开终端输入<code>hexo init</code></p>
+</blockquote>
+<div class="hljs"><pre><code class="hljs bash">INFO  Start processing
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre></div>
+
+<p>看到上面的输出信息，在浏览器打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>就可以看到生成的第一篇Blog了</p>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><h4 id="hexo-theme-fluid"><a href="#hexo-theme-fluid" class="headerlink" title="hexo-theme-fluid"></a><a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">hexo-theme-fluid</a></h4><ul>
+<li>一款 Material Design 风格的主题</li>
+<li><a href="https://hexo.fluid-dev.com/docs/guide/#主题简介" target="_blank" rel="noopener">配置指南 | Fluid</a></li>
+<li><a href="https://hexo.fluid-dev.com/posts/fluid-write/" target="_blank" rel="noopener">搭配 Fluid 如何优雅的写一篇文章</a></li>
+</ul>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>先安装一个部署插件</p>
+<div class="hljs"><pre><code class="hljs shell">npm install hexo-deployer-git --save</code></pre></div>
+
+<p>打开根目录下的 _config.yml 文件，找到 Deployment (最底部)</p>
+<div class="hljs"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span>
+<span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span>
+<span class="hljs-attr">deploy:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
+  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:用户名/用户名.github.io.git</span>
+  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span></code></pre></div>
+
+<p>之后就可以执行部署命令了</p>
+<blockquote>
+<p>helloworld的文章在<code>source/_post</code>，删除就不会显示了</p>
+</blockquote>
+<div class="hljs"><pre><code class="hljs shell">hexo clean
+hexo g
+hexo d  #  deploy</code></pre></div>
+
+<p>部署完成之后就可以访问 GitHub Repository 同名的链接了，即：https://用户名.github.io</p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Blog/">Blog</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                    
+                      <a class="hover-with-bg" href="/tags/GitHub/">GitHub</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/20/learn_java/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java学习记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "用Hexo+GitHub搭建博客&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

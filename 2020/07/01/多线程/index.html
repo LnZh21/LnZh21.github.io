@@ -26,7 +26,7 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark.min.css" />
   
 
   
@@ -356,10 +356,10 @@
 </li>
 <li><p>同步代码块</p>
 <ul>
-<li><pre><code class="java"><span class="keyword">synchronized</span>(对象){
+<li><div class="hljs"><pre><code class="java"><span class="keyword">synchronized</span>(对象){
     <span class="comment">//操作共享数据的代码，即为需要被同步的代码</span>
 }
-&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre></div>
 </li>
 <li><p>同步方法的锁：静态方法(类名.class)、 非静态方法(this)</p>
 </li>
@@ -409,7 +409,7 @@
 </li>
 <li><p>ReentrantLock 类实现了 Lock ，它拥有与 synchronized 相同的并发性和内存语义， 在实现线程安全的控制中，比较常用的是 ReentrantLock 可以显式加锁、释放锁 。</p>
 </li>
-<li><pre><code class="java"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>{
+<li><div class="hljs"><pre><code class="java"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>{
     <span class="keyword">private</span> <span class="keyword">final</span> ReentrantLock lock = <span class="keyword">new</span> ReenTrantLock();
     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>{
         lock.lock();
@@ -420,7 +420,7 @@
             lock.unlock();
         }
     }
-}</code></pre>
+}</code></pre></div>
 </li>
 </ul>
 </li>
